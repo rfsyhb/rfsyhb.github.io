@@ -57,6 +57,20 @@ main {
     width: 80%;
 }
 
+.explore-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333; /* Atau warna lain yang Anda inginkan */
+    color: #fff;
+    text-decoration: none; /* Menghilangkan garis bawah dari tautan */
+    border-radius: 5px; /* Memberikan sudut bulat */
+    transition: background-color 0.3s; /* Efek transisi ketika tombol ditekan */
+}
+
+.explore-button:hover {
+    background-color: #555; /* Mengubah warna latar ketika kursor berada di atas tombol */
+}
+
 .content h1 {
     font-size: 24px;
     margin-bottom: 10px;
