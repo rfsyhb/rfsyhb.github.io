@@ -79,6 +79,43 @@
             </div>
         </section>
 
+        <!-- latihan form -->
+        <section>
+            <h2>Latihan melakukan form</h2>
+            <h4>Form Login</h4>
+            <!-- post cocok untuk yang memodifikasi (tidak terlihat di URL) -->
+            <form method="post" action="">
+                <div>
+                    <label for="emailUser">Email</label><br>
+                    <!-- name diperlukan setiap input karena data dikirim dalam bentuk KEY dan VALUE -->
+                    <input type="email" id="emailUser" name="emailUser">
+                </div>
+
+                <div>
+                    <label for="passwordUser">Password</label><br>
+                    <input type="password" id="passwordUser" name="passwordUser">
+                </div>
+
+                <button type="submit">Submit</button>
+            </form>
+            <!-- get terlihat di URL cocok untuk permintaan tanpa efek samping -->
+            <form method="POST" action="">
+                <div>
+                    <label for="namaUser">Name</label><br>
+                    <!-- name diperlukan setiap input karena data dikirim dalam bentuk KEY dan VALUE -->
+                    <input type="text" id="namaUser" name="namaUser">
+                </div>
+
+                <div>
+                    <label for="courseUser">Course</label><br>
+                    <input type="text" id="courseUser" name="courseUser">
+                </div>
+
+                <button type="submit">Submit</button>
+            </form>
+            <a href="https://developer.mozilla.org/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data"><u>Sending form data oleh MDN</u></a>
+        </section>
+
     </main>
 </body>
 
