@@ -15,36 +15,42 @@
     </header>
     <main>
         <h1>Pemenang Piala Dunia Tiga Tahun Terakhir</h1>
+        
 
         <table>
-            <tr>
-                <th>Tahun</th>
-                <th>Juara 1</th>
-                <th>Juara 2</th>
-                <th>Juara 3</th>
-            </tr>
-            <tr>
-                <td>2018</td>
-                <td>Prancis</td>
-                <td>Kroasia</td>
-                <td>Belgium</td>
-            </tr>
-            <tr>
-                <td>2014</td>
-                <td>Jerman</td>
-                <td>Argentina</td>
-                <td>Belanda</td>
-            </tr>
-            <!-- percobaan Spanning Cell (col dan row) -->
-            <tr>
-                <td>2010</td>
-                <td>Spanyol</td>
-                <td colspan="2" rowspan="2">Ujang Col & row span 2</td>
-            </tr>
-            <tr>
-                <td></td>
-                <td>Asep</td>
-            </tr>
+            <caption>id, headers, thead, tbody, tfoot, caption  </caption>
+            <thead>
+                <tr>
+                    <th>Tahun</th>
+                    <th id="juara1">Juara 1</th>
+                    <th>Juara 2</th>
+                    <th>Juara 3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2018</td>
+                    <td headers="juara1">Prancis</td>
+                    <td>Kroasia</td>
+                    <td>Belgium</td>
+                </tr>
+                <tr>
+                    <td>2014</td>
+                    <td>Jerman</td>
+                    <td headers="">Argentina</td>
+                    <td>Belanda</td>
+                </tr>
+                <!-- percobaan Spanning Cell (col dan row) -->
+                <tr>
+                    <td>2010</td>
+                    <td>Spanyol</td>
+                    <td colspan="2" rowspan="2">Ujang Col & row span 2</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Asep</td>
+                </tr>
+            </tbody>
         </table>
     </main>
 </body>
