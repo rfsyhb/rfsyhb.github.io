@@ -1,6 +1,13 @@
 body {
     /* akhir font-family harus generic yang dapat diterima semua browser */
     font-family: 'Quicksand', sans-serif;
+
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    padding: 20px;
 }
 
 h2,
