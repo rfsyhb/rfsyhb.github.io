@@ -47,7 +47,7 @@ a[href$='.org'] {
 /* ! tanpa universal juga sebenarnya sudah bisa */
 /* * Menargetkan seluruh tipe elemen yang mengandung nilai "en" pada atribut lang */
 *[lang^='en'] {
-    font-style: italic;
+    font-size: 15px;
 }
 
 /* ! untuk CLASS dan ID juga dapat langsung tanpa universal */
@@ -62,8 +62,27 @@ a[href$='.org'] {
     padding: 20px;
 }
 
+h1 {
+    color: black;
+}
+
 /* 
 dalam praktek sehari-hari, meninggalkan universal selector biasanya tidak akan mengubah 
 hasil akhir dan dapat membuat CSS Anda sedikit lebih efisien karena mengurangi spesifisitas 
 dan kompleksitas selector.
 */
+
+/* * adjacent */
+/* ! berubah pada p berikutnya saja */
+/* Rule akan diterapkan pada elemen paragraf yang berada tepat setelah elemen img */
+img+p {
+    color: rgb(246, 131, 131);
+}
+
+/* * general */
+/* ! merubah seluruh setelah yang pertama */
+/* Rule akan diterapkan pada semua elemen <p> yang susunannya terletak setelah elemen <img> */
+h2~p {
+    color: rgb(4, 176, 238);
+}
+

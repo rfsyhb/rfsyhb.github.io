@@ -16,25 +16,70 @@
     </header>
 
     <main>
-        <p>percobaan untuk <span>span dengan type selector</span></p>
+        <!-- ! Basic Selectors -->
+        <section>
+            <h1>Penerapan Basic Selector</h1>
+            <p>percobaan untuk <span>span dengan type selector</span></p>
 
-        <div class="ini-class">
-            <p>ini adalah class selector</p>
-        </div>
+            <div class="ini-class">
+                <p>ini adalah class selector</p>
+            </div>
 
-        <div id="hayoyo">
-            <p>ini adalah id selector</p>
-        </div>
+            <div id="hayoyo">
+                <p>ini adalah id selector</p>
+            </div>
 
-        <p>percobaan untuk attr. selector</p>
-        <ul>
+            <p>percobaan untuk attr. selector</p>
             <ul>
-                <li><a href="#internal">Internal link</a></li>
-                <li><a href="http://example.com">Example link</a></li>
-                <li><a href="#InSensitive">Insensitive internal link</a></li>
-                <li><a href="http://example.org">Example org link</a></li>
+                <ul>
+                    <li><a href="#internal">Internal link</a></li>
+                    <li><a href="http://example.com">Example link</a></li>
+                    <li><a href="#InSensitive">Insensitive internal link</a></li>
+                    <li><a href="http://example.org">Example org link</a></li>
+                </ul>
             </ul>
-        </ul>
+        </section>
+
+        <!-- ! Combinator -->
+        <section>
+            <h1>Penerapan Combinator</h1>
+            <p>
+                Ini merupakan paragraf pertama. Rule styling tidak akan diterapkan pada
+                elemen paragraf ini.
+            </p>
+            <img src="https://raw.githubusercontent.com/dicodingacademy/a123-webdasar-labs/099-shared-files/shared-media/g-dicoding-logo.png"
+                alt="g Dicoding Logo" width="400px" />
+            <p>
+                Ini merupakan paragraf kedua dan ditetapkan setelah elemen gambar. Maka
+                paragraf ini seharusnya menerapkan rule dengan menampilkan teks berwarna
+                hijau.
+            </p>
+            <p>
+                Ini merupakan paragraf ketiga. Letaknya memang setelah elemen gambar,
+                Namun, tidak diletakkan persis setelahnya, sehingga rule tidak akan
+                diterapkan pada elemen ini.
+            </p>
+
+            <div>
+                <h2>Percobaan general sibling selector</h2>
+                <p>
+                    Ini merupakan paragraf kedua dan ditetapkan setelah elemen gambar. Maka
+                    paragraf ini menerapkan rule dengan menampilkan teks berwarna hijau.
+                </p>
+                <div>
+                    <p>
+                        Ini merupakan paragraf ketiga, letaknya setelah elemen gambar, tetapi
+                        paragraf ini dibungkus di dalam div sehingga paragraf ini tidak akan
+                        menerapkan rule styling karena tidak memiliki induk yang sama.
+                    </p>
+                </div>
+                <p>
+                    Ini merupakan paragraf empat. Letaknya memang setelah elemen gambar dan
+                    memiliki induk yang sama seperti elemen gambar, sehingga elemen ini akan
+                    menerapkan rule dengan menampilkan teks berwarna hijau.
+                </p>
+            </div>
+        </section>
     </main>
 </body>
 
