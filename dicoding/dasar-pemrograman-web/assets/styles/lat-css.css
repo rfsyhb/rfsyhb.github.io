@@ -1,0 +1,69 @@
+/* * elemen selector */
+span {
+    font-size: 20px;
+}
+
+/* * class selector */
+.ini-class {
+    background-color: rgb(220, 220, 220);
+}
+
+/* * id selector */
+/* ! id harus unik, jika ingin banyak gunakan class selector */
+#hayoyo {
+    font-family: monospace;
+}
+
+/* * <a> element yang menerapkan href attribute */
+a[href] {
+    color: blue;
+}
+
+/* * <a> element yang menerapkan nilai pada href dengan awalan "#" */
+a[href^='#'] {
+    background-color: gold;
+}
+
+/* * <a> element yang menerapkan nilai pada href yang mengandung teks "example" */
+a[href*='example'] {
+    background-color: silver;
+}
+
+/* * <a> element yang menerapkan nilai pada href yang mengandung teks "insensitive" tidak mementingkan huruf kapital*/
+a[href*='insensitive' i] {
+    color: cyan;
+}
+
+/* * <a> element yang menerapkan nilai pada href dengan akhiran ".org" */
+a[href$='.org'] {
+    color: red;
+}
+
+/* * Menargetkan seluruh tipe elemen */
+* {
+    color: green;
+}
+
+/* ! tanpa universal juga sebenarnya sudah bisa */
+/* * Menargetkan seluruh tipe elemen yang mengandung nilai "en" pada atribut lang */
+*[lang^='en'] {
+    font-style: italic;
+}
+
+/* ! untuk CLASS dan ID juga dapat langsung tanpa universal */
+/* * Menargetkan seluruh tipe elemen yang memiliki nilai "warning" pada atribut class */
+*.warning {
+    color: red;
+}
+
+/* * Menargetkan seluruh tipe elemen yang memiliki nilai "content" pada atribut id */
+*#content {
+    border: 1px solid blue;
+    padding: 20px;
+}
+
+/* 
+dalam praktek sehari-hari, meninggalkan universal selector biasanya tidak akan mengubah 
+hasil akhir dan dapat membuat CSS Anda sedikit lebih efisien karena mengurangi spesifisitas 
+dan kompleksitas selector.
+*/
