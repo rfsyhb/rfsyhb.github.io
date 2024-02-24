@@ -37,6 +37,15 @@ nav a:hover {
     width: 200px;
 }
 
+.card {
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+
+    padding: 20px;
+    margin-top: 20px;
+}
+/* https://www.cssmatic.com/box-shadow */
+
 footer {
     padding: 20px;
     color: white;
