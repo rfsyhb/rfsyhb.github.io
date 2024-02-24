@@ -43,6 +43,7 @@
         <!-- ! Combinator -->
         <section>
             <h1>Penerapan Combinator</h1>
+            <!-- adjacent -->
             <p>
                 Ini merupakan paragraf pertama. Rule styling tidak akan diterapkan pada
                 elemen paragraf ini.
@@ -60,6 +61,7 @@
                 diterapkan pada elemen ini.
             </p>
 
+            <!-- general -->
             <div>
                 <h2>Percobaan general sibling selector</h2>
                 <p>
@@ -79,6 +81,61 @@
                     menerapkan rule dengan menampilkan teks berwarna hijau.
                 </p>
             </div>
+            <p>Ini paragraf kelima. di luar div (tidak terpengaruh karena bukan dalam satu parent)</p>
+
+            <!-- child -->
+            <figure>
+                <p>paragraf pertama dalam figure (sebagai anak/child langsung)</p>
+                <p>paragraf kedua</p>
+                <figcaption>
+                    <p>paragraf ketiga namun ini di dalam figcaption yang berada dalam figure</p>
+                </figcaption>
+                <p>paragraf keempat</p>
+            </figure>
+
+            <!-- descendant selector -->
+            <div>
+                <h4>descendant 1</h4>
+                <section>
+                    <h4>descendant 2 berada dalam section</h4>
+                </section>
+                <h4>descendant 3</h4>
+            </div>
+            <h4>descendant 4 di luar div</h4>
+        </section>
+
+        <!-- pseudo-class selector -->
+        <p>
+            Dapatkan pekerjaan impian di
+            <a target="_blank" href="https://jobs.dicoding.com/">
+                Dicoding Jobs
+            </a>.
+        </p>
+
+        <!-- pseudo-element selector -->
+        <blockquote>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eius error
+            explicabo ipsum molestiae necessitatibus nesciunt possimus reprehenderit sed
+            voluptates. Aliquam aspernatur autem est nobis officia praesentium quas
+            recusandae rem.
+        </blockquote>
+
+        <!-- ! Font styling -->
+        <section class="font-styling">
+            <h1>Font Styling</h1>
+            <p>
+                <span class="normal">normal</span> | <span class="bold">bold</span> |
+                <span class="bolder">bolder</span> | <span class="lighter">lighter</span> |
+                <span class="fw100">fw100</span> | <span class="fw200">fw200</span> |
+                <span class="fw300">fw300</span> | <span class="fw400">fw400</span> |
+                <span class="fw500">fw500</span> | <span class="fw600">fw600</span> |
+                <span class="fw700">fw700</span> | <span class="fw800">fw800</span> |
+                <span class="fw900">fw900</span>
+            </p>
+            <p>
+                <span class="normal">normal</span> | <span class="italic">italic</span> |
+                <span class="oblique">oblique</span>
+            </p>
         </section>
     </main>
 </body>
