@@ -206,4 +206,64 @@ blockquote::first-line {
     font-style: oblique;
 }
 
-/* text styling */
+/* * text styling */
+.text-styling p,
+.text-styling a {
+    color: black;
+    background-color: white;
+}
+
+.text-styling a {
+    color: blue;
+}
+
+/* ! line height -> garis dasar ke garis dasar */
+.ln2 {
+    line-height: 5;
+}
+
+.ln200 {
+    line-height: 200%;
+}
+
+.ln2em {
+    line-height: 2em;
+}
+
+/* ! text indent -> lekuk awal */
+.indent25per {
+    text-indent: 25%;
+}
+
+/* ! text alightment  */
+.alignright {
+    text-align: right;
+}
+
+/* ! text decoration */
+.decoration-none {
+    text-decoration: none;
+}
+
+/* ! text transform */
+.text-styling a span {
+    color: black;
+    text-transform: uppercase;
+}
+
+/* ! letter spacing */
+.letter-spacing {
+    letter-spacing: 4px;
+}
+
+/* ! word spacing */
+.word-spacing {
+    word-spacing: 1.5em;
+}
+
+/* ! text shadow */
+.shadow-four {
+    text-shadow: -2px -2px #666666;
+    background-color: #cccccc;
+    color: #bbbbbb;
+}
