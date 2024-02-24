@@ -267,3 +267,79 @@ blockquote::first-line {
     background-color: #cccccc;
     color: #bbbbbb;
 }
+
+/* ! dimension */
+.box {
+    height: 300px;
+    width: 300px;
+    background-color: #11c5c6;
+}
+
+.box p {
+    color: black;
+    height: 75%;
+    width: 80%;
+    background-color: #fbdd1c;
+}
+
+/* ! limiting dimension */
+.box-content {
+    max-width: 800px;
+    height: 400px;
+
+    margin-left: auto;
+    margin-right: auto;
+    background-color: deeppink;
+}
+
+.box-content p {
+    color: black;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* ! overflow */
+.box-overflow {
+    height: 200px;
+    width: 200px;
+    background-color: lightgreen;
+    /* ! visible/hidden/scroll/auto */
+    overflow: hidden;
+}
+
+/* ! box sizing */
+.box-sizing-content {
+    box-sizing: content-box;
+}
+
+.box-sizing-box {
+    box-sizing: border-box;
+}
+
+/* ! border */
+.coba-border {
+    border-style: solid;
+    border-top-width: 2px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 2px;
+    width: 6em;
+    padding: 10px;
+    box-sizing: content-box;
+}
+
+.coba-border span {
+    background-color: greenyellow;
+}
+
+/* ! margin */
+.box-center {
+    width: 50%;
+    border: 4px solid darkblue;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.box-center p {
+    margin: 0 0 0 0;
+}
