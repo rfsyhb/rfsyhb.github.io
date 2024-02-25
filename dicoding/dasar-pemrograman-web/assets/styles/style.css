@@ -27,8 +27,13 @@ nav a {
     color: white;
 }
 
-nav a:hover {
+a:hover {
     font-weight: bold;
+}
+
+.halaman-main a:hover {
+    color: white;
+    background-color: #00c8eb;
 }
 
 .featured-image {

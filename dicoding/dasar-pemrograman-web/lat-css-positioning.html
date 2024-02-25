@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/styles/lat-css-positioning.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="index.html">back</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Percobaan position: relative</h2>
+        <p>Relative akan dipindah dari barisan normal flow ke atas, jadi menggunakan top bukan margin-top</p>
+        <div class="box first"></div>
+        <div class="box second"></div>
+        <div class="box third"></div>
+        <h2>Percobaan position: absolute</h2>
+        <p>absolute seperti relative, namun elemen bawahnya akan menganggap elemen tsb tidak ada (menimpa tempat)</p>
+        <p>sebagai contoh <em>pink</em> akan dikasih margin-left 20px, dan ungu akan <strong>absolute</strong></p>
+        <div class="box fourth"></div>
+        <div class="box fifth"></div>
+        <p>fourth (ungu) ditarik dari <em>normal flow</em> dan fifth (pink) mengambil posisi milik fourth (ungu)</p>
+
+        <h2>Percobaan position: absolute ber-parent</h2>
+        <div class="parent">
+            <h1 class="absolute">Lorem ipsum dolor sit amet.</h1>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium iusto non optio vel
+                voluptas? Assumenda blanditiis consequatur doloribus porro quasi similique vero
+                voluptatibus. Adipisci, tenetur.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus commodi consectetur
+                dolore eligendi, esse fuga hic laboriosam nobis nostrum, nulla omnis optio pariatur
+                repellendus reprehenderit saepe, sit soluta vel vero!
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aut corporis deleniti
+                doloremque et excepturi expedita labore libero, placeat, quaerat rerum ullam vitae
+                voluptate. Accusantium et explicabo qui tenetur unde. Amet aperiam doloremque enim, expedita
+                id illo minima porro quod.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aliquid asperiores
+                blanditiis cumque eos ex expedita facilis laborum maiores necessitatibus neque, officiis
+                pariatur porro temporibus unde veritatis vitae? Beatae dolores error ex fugiat molestias
+                neque placeat quod ratione repellat veritatis! A culpa cumque, delectus distinctio ducimus
+                earum et ex quas quia quis tempore temporibus veritatis voluptates. Delectus doloremque
+                mollitia nobis?
+            </p>
+        </div>
+        <!-- <h1 class="absolute">kocak</h1> -->
+
+        <h2>Percobaan position: fixed</h2>
+        <h3 class="fixed">position: fixed</h3>
+    </main>
+</body>
+
+</html>
