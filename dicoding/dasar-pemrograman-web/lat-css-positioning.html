@@ -10,8 +10,9 @@
 
 <body>
     <header>
-        <nav>
-            <a href="index.html">back</a>
+        <nav
+            style="position: fixed; bottom: 50%; right: 25%; background-color: bisque; padding: 10px; box-sizing: border-box; width: 80px; text-align: center; box-shadow: 4px 4px 9px 0px rgba(0,0,0,0.75);">
+            <a href="index.html" style="text-decoration: none;">back</a>
         </nav>
     </header>
 
@@ -60,6 +61,42 @@
 
         <h2>Percobaan position: fixed</h2>
         <h3 class="fixed">position: fixed</h3>
+        <em>textnya lagi melayang tuh</em>
+
+        <h2><br>Percobaan float dua buah</h2>
+        <div class="container">
+            <div class="left-content">
+                <h2>Left Content</h2>
+            </div>
+            <div class="right-content">
+                <h2>Right Content</h2>
+            </div>
+        </div>
+
+        <h2><br>Percobaan float tiga buah</h2>
+        <div class="container">
+            <div class="coba3-left-content">
+                <h2>Left Content</h2>
+            </div>
+            <div class="coba3-center-content">
+                <h2>Center Content</h2>
+            </div>
+            <div class="coba3-right-content">
+                <h2>Right Content</h2>
+            </div>
+        </div>
+
+        <h2><br>Permasalahan float ketika induk tidak ada tinggi (height)</h2>
+        <!-- dianggap tidak ada oleh induk, padahal diwrap oleh text sesama child -->
+        <div class="container-float">
+            <img src="https://raw.githubusercontent.com/dicodingacademy/a123-webdasar-labs/099-shared-files/shared-media/g-dicoding-logo.png"
+                alt="g Dicoding Logo" width="200px" />
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci architecto
+                aspernatur dolorem doloremque eum excepturi fuga hic, molestias obcaecati officia
+                perferendis perspiciatis qui saepe ut velit veniam vitae voluptatum.
+            </p>
+        </div>
     </main>
 </body>
 
