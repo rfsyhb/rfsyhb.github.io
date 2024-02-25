@@ -1,0 +1,49 @@
+.container {
+    display: flex;
+    /* ! arah */
+    /* flex-direction: row; */
+    /* ! dua dimensi */
+    flex-wrap: wrap;
+    /* ! lokasi */
+    justify-content: space-evenly;
+    /* ! mengatur child */
+    align-items: stretch;
+}
+
+.box {
+    width: 200px;
+    height: 100px;
+
+    margin-bottom: 8px;
+    margin-right: 8px;
+}
+
+.box:nth-child(odd) {
+    background-color: salmon;
+}
+
+.box:nth-child(even) {
+    background-color: lime;
+}
+
+section {
+    width: 30%;
+    background-color: bisque;
+}
+
+[class^=shrink] {
+    display: flex;
+}
+
+.shrink-1 .boxs {
+    background-color: salmon;
+
+    flex-shrink: 1;
+}
+
+.shrink-0 .boxs {
+    background-color: lime;
+
+    /* ! shrink default adalah 1 */
+    flex-shrink: 0;
+}
