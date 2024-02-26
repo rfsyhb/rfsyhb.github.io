@@ -1,0 +1,85 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+
+    height: 100vh;
+    margin: 0;
+
+    display: flex;
+    /* agar navbar ke samping */
+    flex-direction: column;
+}
+
+header.navbar-container {
+    width: 100%;
+    max-width: 1200px;
+    padding-block: 1rem;
+    margin-inline: auto;
+
+    display: flex;
+
+    /* ! agar child/konten space-around */
+    justify-content: space-around;
+    /* ! agar gambar dan list rata */
+    align-items: center;
+
+    /* ! berada di lapisan/tumpukan teratas */
+    z-index: 9999;
+}
+
+header.navbar-container .logo img {
+    width: 150px;
+}
+
+header.navbar-container .nav-list ul {
+    padding-left: 0;
+
+    display: flex;
+    justify-content: center;
+    gap: 2rem 1rem;
+}
+
+header.navbar-container .nav-list li {
+    list-style-type: none;
+}
+
+header.navbar-container .nav-list li a {
+    /* ! agar tombol lebih besar */
+    padding: 0.5rem 1.5rem;
+    border-radius: 999px;
+    -webkit-border-radius: 999px;
+    -moz-border-radius: 999px;
+    -ms-border-radius: 999px;
+    -o-border-radius: 999px;
+
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: 500;
+
+    /* ! agar anchor menjadi black */
+    color: black;
+
+    /* ! agar hover a bertransisi */
+    /* * diterapkan pada a agar lebih efisien, kontrol lebih bebas, konsisten untuk semua perubahan state */
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+}
+
+header.navbar-container .nav-list li:hover a {
+    background-color: #425c77;
+    color: white;
+}
+
+.dummy {
+    height: 0;
+
+    
+}
