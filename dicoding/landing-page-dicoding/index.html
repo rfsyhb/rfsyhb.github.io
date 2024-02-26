@@ -56,7 +56,19 @@
                     mengakselerasi Indonesia agar menjadi yang terdepan.
                 </p>
 
-                <button>Lebih lanjut</button>
+                <!-- ! button biasanya digunakan aksi memicu JS -->
+                <button id="backButton" type="button">kembali</button>
+
+                <!-- ! kurang cocok -->
+                <!-- * 1 -->
+                <!-- <form action="../index.html">
+                    <button type="submit">Back</button>
+                </form> -->
+
+                <!-- * 2 -->
+                <!-- <a href="../index.html">
+                    <button type="button">Kembali</button>
+                </a> -->
             </div>
 
             <div class="content-image">
@@ -67,14 +79,19 @@
         <aside>
             <div class="social-media">
                 <ul>
-                    <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                    <li><a href="https://www.youtube.com/@OzRafi"><i class="fab fa-youtube"></i></a></li>
+                    <li><a href="https://id.linkedin.com/in/rafi-syihab-9020a51a0"><i
+                                class="fab fa-linkedin-in"></i></a></li>
                     <li><a href="#"><i class="fab fa-twitter"></i></a></li>
                     <li><a href="#"><i class="fab fa-facebook"></i></a></li>
                 </ul>
             </div>
         </aside>
     </main>
+
+    <script>
+        document.getElementById('backButton').addEventListener('click', function () { window.location.href = '../index.html'; });
+    </script>
 </body>
 
 </html>
