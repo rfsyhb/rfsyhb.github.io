@@ -10,11 +10,6 @@ body {
     padding: 0;
 }
 
-main {
-    padding: 20px;
-    overflow: auto;
-}
-
 h2,
 h3 {
     color: #00a2c6;
@@ -24,18 +19,11 @@ h3 {
     font-size: 16px;
 }
 
-nav a {
-    font-size: 18px;
-    font-weight: 400;
-    text-decoration: none;
-
-    color: white;
-}
-
 a:hover {
     font-weight: bold;
 }
 
+/* hanya tambahan untuk berganti file */
 .halaman-main a:hover {
     color: white;
     background-color: #00c8eb;
@@ -56,15 +44,11 @@ a:hover {
     width: 200px;
 }
 
-.card {
-    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
-
-    padding: 20px;
-    margin-top: 20px;
-}
-
 /* https://www.cssmatic.com/box-shadow */
+
+header {
+    display: inline;
+}
 
 .jumbotron {
     font-size: 20px;
@@ -72,12 +56,6 @@ a:hover {
     background-color: #00c8eb;
     text-align: center;
     color: white;
-}
-
-nav li {
-    display: inline;
-    list-style-type: none;
-    margin-right: 20px;
 }
 
 nav {
@@ -89,21 +67,67 @@ nav {
     top: 0;
 }
 
-header {
-    display: inline;
+nav ul {
+    /* ! jika menggunakan flex, maka di parent list */
+    display: flex;
+    padding-inline: 4rem;
+    /* background-color: bisque; */
+    gap: 2rem;
+}
+
+nav li {
+    /* ! jika tanpa flex, maka pakai display inline dalam child */
+    /* display: inline; */
+    list-style-type: none;
+    /* margin-right: 20px; */
+}
+
+nav a {
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+
+    color: white;
+}
+
+main {
+    padding: 20px;
+    /* overflow: auto; */
+    display: flex;
+    gap: 1.5rem;
 }
 
 #content {
-    width: 75%;
-    float: left;
+    /* width: 75%;
+    float: left; */
+
+    /* ! karena menggunakan flex, hanya gunakan flex / flex-grow */
+    flex: 5;
+    /* ! flex 5 berarti flex-grow 5 flex-shrink 1 flex-basis 0% */
+    /* flex-grow: 5; */
+
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem 2rem;
+}
+
+.card {
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+
+    padding: 20px;
+    /* margin-top: 20px; */
 }
 
 aside {
-    width: 25%;
+    /* width: 25%;
     float: right;
-    padding-left: 20px;
+    padding-left: 20px; */
     /* ! untuk menguji */
     /* background-color: gainsboro; */
+
+    flex: 1;
+    /* flex-grow: 1; */
 }
 
 footer {
@@ -114,16 +138,35 @@ footer {
     font-weight: bold;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1200px) {
 
-    #content,
+    main {
+        flex-flow: column nowrap;
+    }
+
     aside {
-        width: 100%;
-        padding: 0;
+        align-self: center;
     }
 }
 
+@media screen and (max-width: 768px) {
+
+    nav ul {
+        justify-content: center;
+    }
+
+    aside {
+        align-self: stretch;
+    }
+}
+
+/* ! responsif */
 /* https://www.dicoding.com/blog/dasar-tampilan-responsif-pada-website/ 
 https://developers.google.com/web/fundamentals/design-and-ux/responsive
 https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag
 https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Media_queries */
+
+/* ! flex */
+/* https://css-tricks.com/flex-grow-is-weird/
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout */
