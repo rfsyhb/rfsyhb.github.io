@@ -145,8 +145,8 @@ section.hero .hero-container .hero-description {
 section.hero .hero-container .hero-description .title {
     margin-block: 1rem;
     font-size: 1.9rem;
-    text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
-    
+    text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.5);
+
     transition: all 0.1s ease-in-out;
     -webkit-transition: all 0.1s ease-in-out;
     -moz-transition: all 0.1s ease-in-out;
@@ -332,6 +332,7 @@ div.content .about {
     display: flex;
     flex-flow: column nowrap;
     gap: 1rem;
+    margin-inline: auto;
 }
 
 div.content .about>h2,
@@ -423,7 +424,6 @@ aside .profile p {
 }
 
 aside .profile {
-
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
@@ -510,4 +510,72 @@ footer {
     /* background-color: var(--bg-color); */
     text-align: left;
     font-weight: bold;
+}
+
+/* ! Responsif */
+/* * Tablet */
+@media screen and (max-width: 480px) {
+    header.navbar-container .logo img {
+        width: 150px;
+    }
+
+    section.hero .hero-container .hero-image img {
+        max-width: 350px;
+    }
+}
+
+/* * Mobile Phone */
+@media screen and (max-width: 768px) {
+    header.navbar-container {
+        flex-direction: column;
+    }
+
+    header.navbar-container .nav-list ul {
+        flex-wrap: wrap;
+    }
+
+    header.navbar-container .nav-list li a {
+        font-size: 1rem;
+    }
+
+    header.navbar-container .logo img {
+        width: 250px;
+    }
+
+    section.hero .hero-container {
+        flex-direction: column;
+    }
+
+    section.hero .hero-container .hero-image img {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    main .container {
+        flex-direction: column;
+    }
+
+    main .container .portofolio .porto-list .project {
+        flex-direction: column;
+    }
+
+    div.content .portofolio .porto-list .project:nth-child(odd) .project-description {
+        order: 1;
+    }
+}
+
+/* * Desktop */
+
+@media screen and (max-width: 1200px) {
+    main .container {
+        flex-direction: column;
+    }
+
+    div.content {
+        padding: 2rem;
+    }
+
+    aside {
+        padding: 1rem 2rem 0 2rem;
+    }
 }
