@@ -117,7 +117,7 @@ div.content .hero {
 }
 
 div.content .hero .hero-description {
-    background-color: var(--debug-color1);
+    /* background-color: var(--debug-color1); */
     flex: 3;
 }
 
@@ -131,8 +131,38 @@ div.content .hero .hero-description p {
     line-height: 1.7rem;
 }
 
+main .hero .hero-description button {
+    padding: 0.8rem 2.5rem;
+    border: 3px solid transparent;
+    border-radius: 13px;
+    -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+    -ms-border-radius: 13px;
+    -o-border-radius: 13px;
+    margin-block-start: 1rem;
+    background-color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+    text-transform: capitalize;
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--bg-color);
+
+    cursor: pointer;
+    transition: all 0.15s ease-in;
+    -webkit-transition: all 0.15s ease-in;
+    -moz-transition: all 0.15s ease-in;
+    -ms-transition: all 0.15s ease-in;
+    -o-transition: all 0.15s ease-in;
+}
+
+main .hero .hero-description button:hover {
+    border: 3px solid var(--text-color);
+    background-color: transparent;
+    color: var(--text-color);
+}
+
 div.content .hero .hero-image {
-    background-color: var(--debug-color2);
+    /* background-color: var(--debug-color2); */
     flex: 2;
 
     /* menjadi parent agar img dapat di tengah */
@@ -140,9 +170,15 @@ div.content .hero .hero-image {
 }
 
 div.content .hero .hero-image img {
-    width: 300px;
+    /* background-color: var(--debug-color2); */
+    width: 350px;
     min-width: 250px;
-
     margin: auto;
+    filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.5));
+    -webkit-filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.5));
 }
 
+div.content .hero .hero-image img:hover {
+    filter: none;
+    -webkit-filter: none;
+}
