@@ -24,6 +24,18 @@ body {
     flex-flow: column nowrap;
 }
 
+.card {
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+
+    padding: 1.3rem;
+
+}
+
 /* ! header */
 header.navbar-container {
     /* background-color: var(--debug-color1); */
@@ -282,21 +294,26 @@ div.content .about>p {
     margin-top: 0;
 }
 
+div.content .about .skill h3 {
+    margin-top: 0;
+}
 
 div.content .about .skill-container {
     display: flex;
     gap: 1.2rem;
-    flex-flow: row;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
+    padding: 1rem;
 }
 
 div.content .about .skill-container .skill-card {
     box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    width: 300px;
+    height: auto;
     flex-grow: 1;
     padding: 1rem;
 }
@@ -305,7 +322,6 @@ div.content .about .skill-container .skill-card:hover {
     box-shadow: 1px 1px 13px 0 rgba(0, 0, 0, 0.2);
 }
 
-div.content .about .skill-container .skill-card p,
 div.content .about .skill-container .skill-card h4 {
     margin: 0;
 }
@@ -314,6 +330,10 @@ div.content .about .testimonial {
     display: flex;
     flex-flow: column nowrap;
     gap: 1rem;
+}
+
+div.content .about .testimonial h3 {
+    margin-top: 0;
 }
 
 div.content .about .testimonial .testimonial-content figure {
