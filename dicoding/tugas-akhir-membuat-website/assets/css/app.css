@@ -105,48 +105,51 @@ header.navbar-container .nav-list li:hover a {
     color: var(--bg-color);
 }
 
-/* ! main element */
-main {
+/* ! section hero */
+section.hero {
     /* flex: 1; */
     width: 100%;
     max-width: 1200px;
 
     /* agar berada di tengah */
     margin-inline: auto;
+}
 
-    /* padding: 2rem 4rem; */
-    /* display: flex; */
-    /* align-items: flex-start; */
-    /* gap: 2rem; */
+section.hero .hero-content {
+    padding: 1rem 0 0 0;
 }
 
 /* * hero */
-main .hero {
+section.hero .hero-container {
     display: flex;
     align-items: center;
+    flex-flow: row nowrap;
+    gap: 2rem;
+    padding: 0 1.3rem 0 1.3rem;
+    /* background-color: var(--debug-color1); */
 }
 
-main .hero .hero-description {
-    /* background-color: var(--debug-color1); */
+section.hero .hero-container .hero-description {
+    /* background-color: var(--debug-color2); */
     flex: 3;
 }
 
-main .hero .hero-description .title {
+section.hero .hero-container .hero-description .title {
     margin-block: 1rem;
     font-size: 1.9rem;
     text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
 }
 
-main .hero .hero-description .title:hover {
+section.hero .hero-container .hero-description .title:hover {
     text-shadow: none;
 }
 
-main .hero .hero-description p {
+section.hero .hero-container .hero-description p {
     font-size: 1.1rem;
     line-height: 1.7rem;
 }
 
-main .hero .hero-description button {
+section.hero .hero-container .hero-description button {
     padding: 0.8rem 2.5rem;
     border: 3px solid transparent;
     border-radius: 13px;
@@ -170,22 +173,22 @@ main .hero .hero-description button {
     -o-transition: all 0.15s ease-in;
 }
 
-main .hero .hero-description button:hover {
+section.hero .hero-container .hero-description button:hover {
     border: 3px solid var(--text-color);
     background-color: transparent;
     color: var(--text-color);
 }
 
-main .hero .hero-image {
+section.hero .hero-container .hero-image {
     /* background-color: var(--debug-color2); */
-    flex: 2;
+    flex: 1;
 
     /* menjadi parent agar img dapat di tengah */
     display: flex;
 }
 
-main .hero .hero-image img {
-    /*background-color: var(--debug-color2);*/
+section.hero .hero-container .hero-image img {
+    /* background-color: var(--debug-color2); */
     width: 350px;
     min-width: 250px;
     margin: auto;
@@ -193,9 +196,24 @@ main .hero .hero-image img {
     -webkit-filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
 }
 
-main .hero .hero-image img:hover {
+section.hero .hero-container .hero-image img:hover {
     filter: none;
     -webkit-filter: none;
+}
+
+/* ! main element */
+main {
+    /* flex: 1; */
+    width: 100%;
+    max-width: 1200px;
+
+    /* agar berada di tengah */
+    margin-inline: auto;
+
+    /* padding: 2rem 4rem; */
+    /* display: flex; */
+    /* align-items: flex-start; */
+    /* gap: 2rem; */
 }
 
 main .container {
