@@ -25,7 +25,7 @@ body {
 }
 
 .card {
-    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0px 5px 0 rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -115,22 +115,20 @@ section.hero {
     margin-inline: auto;
 }
 
-section.hero .hero-content {
-    padding: 1rem 0 0 0;
-}
-
 /* * hero */
 section.hero .hero-container {
+    /* background-color: var(--debug-color1); */
+
     display: flex;
     align-items: center;
     flex-flow: row nowrap;
     gap: 2rem;
-    padding: 0 1.3rem 0 1.3rem;
-    /* background-color: var(--debug-color1); */
+    padding: 2rem 1.3rem 2rem 1.3rem;
 }
 
 section.hero .hero-container .hero-description {
     /* background-color: var(--debug-color2); */
+
     flex: 3;
 }
 
@@ -209,7 +207,7 @@ main {
 
     /* agar berada di tengah */
     margin-inline: auto;
-
+    padding: 0 0 3rem 0;
     /* padding: 2rem 4rem; */
     /* display: flex; */
     /* align-items: flex-start; */
@@ -397,19 +395,19 @@ aside {
 }
 
 aside .profile h3,
-aside .profile p,
-aside .profile ul {
+aside .profile h4,
+aside .profile p {
     margin: 0;
 }
 
 aside .profile {
+    
     display: flex;
     flex-flow: column nowrap;
-    gap: 1rem;
-}
-
-aside .profile header {
+    align-items: center;
+    align-content: center;
     text-align: center;
+    gap: 1rem;
 }
 
 aside .profile figure img {
@@ -417,11 +415,45 @@ aside .profile figure img {
     filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
 }
 
-aside .profile .bio {
-    text-transform: capitalize;
+aside .profile .profile-description {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 0.5rem;
 }
 
-aside .profile ul {
-    /* list-style-type: none; */
-    padding: 0 0 0 1.3rem;
+aside .profile .profile-description .profile-email {
+    color: var(--bg-color);
+    padding: 0.5em;
+    width: 80%;
+    /* margin-bottom: 20px; */
+    background-color: var(--text-color);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    text-decoration: none;
+}
+
+aside .profile .profile-social-links {
+    display: flex;
+    align-items: center;
+    flex-flow: row nowrap;
+    gap: 1rem;
+}
+
+aside .profile .profile-social-links a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+footer {
+    /* background-color: var(--debug-color1); */
+
+    padding: 2rem;
+    color: var(--text-color);
+    /* background-color: var(--bg-color); */
+    text-align: left;
+    font-weight: bold;
 }
