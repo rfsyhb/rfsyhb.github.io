@@ -36,6 +36,14 @@ body {
 
 }
 
+#home,
+#about,
+#testimonial,
+#portofolio {
+    scroll-margin-top: 14vh;
+}
+
+
 /* ! header */
 header.navbar-container {
     /* background-color: var(--debug-color1); */
@@ -401,7 +409,7 @@ aside .profile p {
 }
 
 aside .profile {
-    
+
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
