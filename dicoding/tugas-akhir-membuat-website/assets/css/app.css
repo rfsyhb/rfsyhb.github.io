@@ -1,3 +1,11 @@
+/* ! Pemberian warna pada variable */
+:root {
+    --text-color: #180202;
+    --bg-color: #EBEAE6;
+    --debug-color1: bisque;
+    --debug-color2: rgb(253, 210, 131);
+}
+
 *,
 *::before,
 *::after {
@@ -6,7 +14,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #EBEAE6;
+    /* background-color: var(--bg-color); */
 
     height: 100vh;
     margin: 0;
@@ -17,7 +25,7 @@ body {
 
 /* ! header */
 header.navbar-container {
-    /* background-color: bisque; */
+    /* background-color: var(--debug-color1); */
 
     width: 100%;
     /* max-width: 1200px; */
@@ -40,7 +48,7 @@ header.navbar-container .logo img {
 }
 
 header.navbar-container .nav-list ul {
-    /* background-color: rgb(253, 210, 131); */
+    /* background-color: var(--debug-color2); */
 
     display: flex;
     gap: 2rem 1rem;
@@ -67,11 +75,16 @@ header.navbar-container .nav-list li a {
     font-size: 1.05rem;
     font-weight: 500;
     text-transform: uppercase;
-    color: black;
+    color: var(--text-color);
 
     transition: all 0.2s ease-in-out;
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
     -ms-transition: all 0.2s ease-in-out;
     -o-transition: all 0.2s ease-in-out;
+}
+
+header.navbar-container .nav-list li:hover a {
+    background-color: black;
+    color: var(--bg-color);
 }
