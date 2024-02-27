@@ -54,6 +54,8 @@ header.navbar-container {
 
     /* vertikal horizontal */
     padding-block: 1.5rem 1rem;
+    padding-inline: 1.3rem;
+
     display: flex;
     margin-inline: auto;
     justify-content: space-between;
@@ -144,6 +146,12 @@ section.hero .hero-container .hero-description .title {
     margin-block: 1rem;
     font-size: 1.9rem;
     text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+    
+    transition: all 0.1s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
 }
 
 section.hero .hero-container .hero-description .title:hover {
@@ -200,6 +208,12 @@ section.hero .hero-container .hero-image img {
     margin: auto;
     filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
     -webkit-filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
+
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
 }
 
 section.hero .hero-container .hero-image img:hover {
@@ -421,6 +435,22 @@ aside .profile {
 aside .profile figure img {
     width: 200px;
     filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
+
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+}
+
+aside .profile figure img:hover {
+    transform: translateY(-2px);
+    -webkit-transform: translateY(-2px);
+    -moz-transform: translateY(-2px);
+    -ms-transform: translateY(-2px);
+    -o-transform: translateY(-2px);
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
+    -webkit-filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
 }
 
 aside .profile .profile-description {
@@ -442,6 +472,22 @@ aside .profile .profile-description .profile-email {
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
     text-decoration: none;
+
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+}
+
+aside .profile .profile-description .profile-email:hover {
+    transform: translateY(-2px);
+    -webkit-transform: translateY(-2px);
+    -moz-transform: translateY(-2px);
+    -ms-transform: translateY(-2px);
+    -o-transform: translateY(-2px);
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
+    -webkit-filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
 }
 
 aside .profile .profile-social-links {
