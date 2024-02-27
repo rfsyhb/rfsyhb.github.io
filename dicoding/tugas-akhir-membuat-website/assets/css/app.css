@@ -27,6 +27,7 @@ body {
 /* ! header */
 header.navbar-container {
     /* background-color: var(--debug-color1); */
+    background-color: var(--bg-color);
 
     width: 100%;
     /* max-width: 1200px; */
@@ -38,6 +39,10 @@ header.navbar-container {
     justify-content: space-between;
     align-items: center;
     z-index: 9999;
+
+    position: sticky;
+    top: 0;
+    box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.5);
 }
 
 header.navbar-container .logo {
