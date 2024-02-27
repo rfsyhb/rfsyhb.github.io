@@ -1,0 +1,77 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #EBEAE6;
+
+    height: 100vh;
+    margin: 0;
+
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+/* ! header */
+header.navbar-container {
+    /* background-color: bisque; */
+
+    width: 100%;
+    /* max-width: 1200px; */
+
+    /* vertikal horizontal */
+    padding-block: 1.5rem 1rem;
+    display: flex;
+    margin-inline: auto;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9999;
+}
+
+header.navbar-container .logo {
+    padding: 0.5rem 2rem;
+}
+
+header.navbar-container .logo img {
+    width: 200px;
+}
+
+header.navbar-container .nav-list ul {
+    /* background-color: rgb(253, 210, 131); */
+
+    display: flex;
+    gap: 2rem 1rem;
+    justify-content: center;
+
+    /* menghilangkan padding bawaan list */
+    padding-left: 0;
+}
+
+header.navbar-container .nav-list li {
+    list-style-type: none;
+}
+
+header.navbar-container .nav-list li a {
+    /* ! agar tombol lebih besar */
+    padding: 0.5rem 1.5rem;
+    border-radius: 999px;
+    -webkit-border-radius: 999px;
+    -moz-border-radius: 999px;
+    -ms-border-radius: 999px;
+    -o-border-radius: 999px;
+
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: black;
+
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+}
