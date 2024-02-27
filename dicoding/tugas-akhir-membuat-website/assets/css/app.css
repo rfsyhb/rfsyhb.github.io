@@ -107,7 +107,7 @@ header.navbar-container .nav-list li:hover a {
 
 /* ! main element */
 main {
-    flex: 1;
+    /* flex: 1; */
     width: 100%;
     max-width: 1200px;
 
@@ -116,12 +116,14 @@ main {
 
     /* padding: 2rem 4rem; */
     display: flex;
-    align-items: flex-start;
+    /* align-items: flex-start; */
+    gap: 2rem;
 }
 
 /* ! child main */
 div.content {
-    flex: 1;
+    padding: 1rem 0 0 0;
+    flex: 3;
     display: flex;
     /* align-items: center; */
     flex-flow: column nowrap;
@@ -326,14 +328,14 @@ div.content .about .skill-container .skill-card h4 {
     margin: 0;
 }
 
-div.content .about .testimonial {
-    display: flex;
-    flex-flow: column nowrap;
-    gap: 1rem;
-}
-
 div.content .about .testimonial h3 {
     margin-top: 0;
+}
+
+div.content .about .testimonial-container {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1.4rem;
 }
 
 div.content .about .testimonial .testimonial-content figure {
@@ -364,4 +366,17 @@ div.content .about .testimonial-content figcaption {
     margin-top: 1rem;
     text-align: right;
     font-weight: bold;
+}
+
+aside {
+    flex: 1;
+    padding: 1rem 0 0 0;
+}
+
+aside .profile header {
+    text-align: center;
+}
+
+aside .profile img {
+    width: 200px;
 }
