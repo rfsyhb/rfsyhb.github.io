@@ -1,31 +1,22 @@
 # Tugas Akhir/Proyek Akhir
-## Belajar Dasar Pemrograman Web
+## Kelas: Belajar Dasar Pemrograman Web
 
-Tugas milik R-02 Rafi Syihab
+Tugas karya R-02 Rafi Syihab
 
-Pembuatan landing page profil diri responsif yang menerapkan konsep _semantic html_ dengan penggunaan css dan juga js.
+Pembuatan _landing page_ profil diri responsif yang menerapkan konsep _semantic html_ dengan penggunaan Cascading Style Sheet dan juga JavaScript.
 
 Fitur yang terdapat pada website profil ini:
-- Navigation Bar
-- Merubah tema light/dark mode website dengan JavaScript
-- Menekan anchor pada nav bar beranimasi scroll
-
+- Penerapan flexbox agar responsif
+- Navigation bar
+- Menekan anchor pada navbar terdapat animasi scroll
 
 ## Colors:
-- #000000
-- #1A1A1A
-- #222222
-- #EBEAE6
+- #180202;
+- #EBEAE6;
+- #e0dfdb;
 
---text: #141210;
---background: #f9f5f3;
---primary: #c47f49;
---secondary: #ebb387;
---accent: #f8974b;
-
-Welcome to My Website
-Your gateway to my world
-This is a personal website showcasing my projects, skills, and ways to contact me
-
-About Me
-I'm a passionate developer with a love for building impactful software.
+Hikmah yang diambil dari proyek ini:
+1. Display flex hanya akan mengatur child nya
+2. Fitur inspect sangat berguna untuk melihat dimensi elements
+3. Padding dan margin harus diperhatikan
+4. Hati-hati ketika melakukan git commit dkk
