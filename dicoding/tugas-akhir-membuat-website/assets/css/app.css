@@ -17,7 +17,7 @@ body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--bg-color);
 
-    height: 100vh;
+    /* height: 100vh; */
     margin: 0;
 
     display: flex;
@@ -69,20 +69,18 @@ header.navbar-container .nav-list li {
 }
 
 header.navbar-container .nav-list li a {
-    /* ! agar tombol lebih besar */
+    /*! agar tombol lebih besar */
     padding: 0.5rem 1.5rem;
-    border-radius: 999px;
-    -webkit-border-radius: 999px;
-    -moz-border-radius: 999px;
-    -ms-border-radius: 999px;
-    -o-border-radius: 999px;
-
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
     text-decoration: none;
     font-size: 1.05rem;
     font-weight: 500;
     text-transform: uppercase;
     color: var(--text-color);
-
     transition: all 0.2s ease-in-out;
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
@@ -115,6 +113,7 @@ div.content {
     display: flex;
     /* align-items: center; */
     flex-flow: column nowrap;
+    gap: 2rem;
 }
 
 /* * hero */
@@ -197,12 +196,11 @@ div.content .hero .hero-image img:hover {
 
 /* * portofolio */
 div.content .portofolio {
-    /*padding: 0rem 2rem;
-    */
+    /* padding top right bottom left */
+    padding: 0 2rem 2rem 2rem;
     display: flex;
     flex-flow: column nowrap;
     box-shadow: 0 0px 5px 0 rgba(0, 0, 0, 0.2);
-    padding: 0px 20px;
     border: 3px solid transparent;
     border-radius: 10px;
     -webkit-border-radius: 10px;
@@ -243,6 +241,7 @@ div.content .portofolio .porto-list .project .project-description a {
 
 div.content .portofolio .porto-list .project .project-description p {
     text-align: center;
+    font-size: 1.2rem;
 }
 
 div.content .portofolio .porto-list .project:nth-child(odd) .project-description {
@@ -258,6 +257,7 @@ div.content .portofolio .porto-list .project img {
     /* * agar gambar sama*/
     width: 100%;
     height: auto;
+    opacity: 0.95;
 
     border-radius: 10px;
     -webkit-border-radius: 10px;
@@ -268,4 +268,80 @@ div.content .portofolio .porto-list .project img {
 
 div.content .portofolio .porto-list .project img:hover {
     box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* * About */
+div.content .about {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem;
+}
+
+div.content .about>h2,
+div.content .about>p {
+    margin-top: 0;
+}
+
+
+div.content .about .skill-container {
+    display: flex;
+    gap: 1.2rem;
+    flex-flow: row;
+    flex-wrap: wrap;
+}
+
+div.content .about .skill-container .skill-card {
+    box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    flex-grow: 1;
+    padding: 1rem;
+}
+
+div.content .about .skill-container .skill-card:hover {
+    box-shadow: 1px 1px 13px 0 rgba(0, 0, 0, 0.2);
+}
+
+div.content .about .skill-container .skill-card p,
+div.content .about .skill-container .skill-card h4 {
+    margin: 0;
+}
+
+div.content .about .testimonial {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem;
+}
+
+div.content .about .testimonial .testimonial-content figure {
+    margin: 0;
+    background-color: #f9f9f9;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease;
+    -webkit-transition: 0.3s ease;
+    -moz-transition: 0.3s ease;
+    -ms-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+}
+
+div.content .about .testimonial .testimonial-content figure:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+div.content .about .testimonial .testimonial-content blockquote {
+    font-style: italic;
+    color: var(--text-color);
+    margin: 0;
+}
+
+div.content .about .testimonial-content figcaption {
+    margin-top: 1rem;
+    text-align: right;
+    font-weight: bold;
 }
