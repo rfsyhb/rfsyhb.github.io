@@ -117,6 +117,7 @@ div.content {
     flex-flow: column nowrap;
 }
 
+/* * hero */
 div.content .hero {
     display: flex;
     align-items: center;
@@ -181,8 +182,8 @@ div.content .hero .hero-image {
 }
 
 div.content .hero .hero-image img {
-    /*background-color: var(--debug-color2);
-    */width: 350px;
+    /*background-color: var(--debug-color2);*/
+    width: 350px;
     min-width: 250px;
     margin: auto;
     filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
@@ -192,4 +193,79 @@ div.content .hero .hero-image img {
 div.content .hero .hero-image img:hover {
     filter: none;
     -webkit-filter: none;
+}
+
+/* * portofolio */
+div.content .portofolio {
+    /*padding: 0rem 2rem;
+    */
+    display: flex;
+    flex-flow: column nowrap;
+    box-shadow: 0 0px 5px 0 rgba(0, 0, 0, 0.2);
+    padding: 0px 20px;
+    border: 3px solid transparent;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+div.content .portofolio .porto-list {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 2rem;
+}
+
+div.content .portofolio .porto-list .project {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+div.content .portofolio .porto-list .project .project-image {
+    flex: 3;
+}
+
+div.content .portofolio .porto-list .project .project-description {
+    flex: 2;
+    display: flex;
+    flex-flow: column;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+div.content .portofolio .porto-list .project .project-description a {
+    color: var(--text-color);
+}
+
+div.content .portofolio .porto-list .project .project-description p {
+    text-align: center;
+}
+
+div.content .portofolio .porto-list .project:nth-child(odd) .project-description {
+    order: -1;
+}
+
+div.content .portofolio .porto-list .project .project-description a:hover {
+    font-weight: 800;
+    text-decoration: none;
+}
+
+div.content .portofolio .porto-list .project img {
+    /* * agar gambar sama*/
+    width: 100%;
+    height: auto;
+
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+div.content .portofolio .porto-list .project img:hover {
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2);
 }
