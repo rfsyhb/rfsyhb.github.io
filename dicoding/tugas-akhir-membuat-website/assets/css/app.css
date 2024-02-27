@@ -2,6 +2,7 @@
 :root {
     --text-color: #180202;
     --bg-color: #EBEAE6;
+    --bg-color-darker: #e0dfdb;
     --debug-color1: bisque;
     --debug-color2: rgb(253, 210, 131);
 }
@@ -14,7 +15,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    /* background-color: var(--bg-color); */
+    background-color: var(--bg-color);
 
     height: 100vh;
     margin: 0;
@@ -124,6 +125,11 @@ div.content .hero .hero-description {
 div.content .hero .hero-description .title {
     margin-block: 1rem;
     font-size: 1.9rem;
+    text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+}
+
+div.content .hero .hero-description .title:hover {
+    text-shadow: none;
 }
 
 div.content .hero .hero-description p {
@@ -170,12 +176,12 @@ div.content .hero .hero-image {
 }
 
 div.content .hero .hero-image img {
-    /* background-color: var(--debug-color2); */
-    width: 350px;
+    /*background-color: var(--debug-color2);
+    */width: 350px;
     min-width: 250px;
     margin: auto;
-    filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.5));
-    -webkit-filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
+    -webkit-filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
 }
 
 div.content .hero .hero-image img:hover {
