@@ -373,10 +373,32 @@ aside {
     padding: 1rem 0 0 0;
 }
 
+aside .profile h3,
+aside .profile p,
+aside .profile ul {
+    margin: 0;
+}
+
+aside .profile {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem;
+}
+
 aside .profile header {
     text-align: center;
 }
 
-aside .profile img {
+aside .profile figure img {
     width: 200px;
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
+}
+
+aside .profile .bio {
+    text-transform: capitalize;
+}
+
+aside .profile ul {
+    /* list-style-type: none; */
+    padding: 0 0 0 1.3rem;
 }
