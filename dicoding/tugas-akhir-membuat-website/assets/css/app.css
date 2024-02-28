@@ -622,9 +622,19 @@ footer {
     header.navbar-container .logo img {
         width: 150px;
     } */
-
     header.navbar-container .nav-list ul li a {
-        padding: 0;
+        padding: 0.2rem 0.3rem;
+        font-size: 1rem;
+        border-radius: 9px;
+        -webkit-border-radius: 9px;
+        -moz-border-radius: 9px;
+        -ms-border-radius: 9px;
+        -o-border-radius: 9px;
+    }
+
+    header.navbar-container .nav-list ul {
+        gap: 0.3rem;
+        /* padding: 0; */
     }
 
     section.hero .hero-container .hero-image img {
@@ -642,7 +652,7 @@ footer {
 @media screen and (max-width: 768px) {
     header.navbar-container {
         flex-direction: column;
-        padding-block: 0.8em 0.3em;
+        padding-block: 0.65em 0.3em;
         /* padding: 0 0 0 0; */
     }
 
