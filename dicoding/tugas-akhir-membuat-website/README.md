@@ -20,6 +20,7 @@ Hikmah yang diambil dari proyek ini:
 2. Fitur inspect sangat berguna untuk melihat dimensi elements
 3. Padding dan margin harus diperhatikan
 4. Hati-hati ketika melakukan git commit dkk
+5. ul itu padding
 
 Update kesalahan:
 1. Memasukkan elemen section class "hero" ke dalam main tepatnya di div class "content"

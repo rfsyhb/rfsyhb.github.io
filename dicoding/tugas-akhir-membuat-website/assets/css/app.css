@@ -40,7 +40,8 @@ body {
 #home,
 #about,
 #testimonial,
-#portofolio {
+#portofolio,
+#journey {
     scroll-margin-top: 14vh;
 }
 
@@ -92,7 +93,7 @@ header.navbar-container .nav-list li {
 }
 
 header.navbar-container .nav-list li a {
-    /*! agar tombol lebih besar */
+    /* ! agar tombol lebih besar */
     padding: 0.5rem 1.5rem;
     border-radius: 12px;
     -webkit-border-radius: 12px;
@@ -240,6 +241,7 @@ main {
 main .container {
     display: flex;
     gap: 2rem;
+    /* align-items: center; */
 }
 
 /* ! child main */
@@ -412,9 +414,15 @@ div.content .about .testimonial-content figcaption {
     font-weight: bold;
 }
 
+/* ! ASIDE */
+
 aside {
+    /* background-color: var(--debug-color1); */
     flex: 1;
     padding: 1rem 0 0 0;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1.5rem;
 }
 
 aside .profile h3,
@@ -505,6 +513,88 @@ aside .profile .profile-social-links a {
     color: var(--text-color);
 }
 
+aside .journey {
+    display: flex;
+    flex-flow: column nowrap;
+
+    /* vertikal horizontal */
+    padding-block: 1.2rem 1.3rem;
+    padding-inline: 1.3rem;
+
+    display: flex;
+    align-items: center;
+
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+}
+
+aside .journey h3 {
+    margin: 0;
+    padding: 0 0 0.4rem 0;
+
+    /* karena sudah di container align item tidak perlu lagi */
+    /* text-align: center; */
+}
+
+aside .journey-title {
+    /* background: var(--debug-color2); */
+    padding: 0 0.8rem 0.2em 0.8rem;
+    border-bottom: 2px solid var(--text-color);
+
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+}
+
+aside .journey-title:hover {
+    padding: 0 1.6rem 0.2em 1.6rem;
+}
+
+.journey-link {
+    padding: 0.6em 0 0 0;
+}
+
+.journey-link ul {
+    /* background-color: var(--debug-color1); */
+
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 0.7rem;
+    align-items: center;
+}
+
+.journey-link ul li a {
+    /* background-color: var(--debug-color2); */
+
+    padding: 0.2rem 1rem;
+    border-radius: 12px;
+}
+
+.journey-link ul li:hover a {
+    background-color: var(--text-color);
+    color: var(--bg-color-darker);
+}
+
+.journey-link ul li a {
+    /* background-color: var(--debug-color1); */
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.05em;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.box-shadow-temporary {
+    box-shadow: 0 0px 0 0.3rem rgba(0, 0, 0);
+}
+
 footer {
     /* background-color: var(--debug-color1); */
 
@@ -532,6 +622,7 @@ footer {
         width: 14em;
     }
 }
+
 /* * Mobile Phone */
 @media screen and (max-width: 768px) {
     header.navbar-container {

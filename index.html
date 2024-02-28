@@ -1,32 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
-    <title>GitHub Pages Hub</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Akhir</title>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="dicoding/tugas-akhir-membuat-website/assets/css/app.css">
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome 5.15.4 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
-    <nav class="container-fluid">
-        <ul>
-            <li><strong>GitHub Pages Hub</strong></li>
-        </ul>
-        <ul>
-            <li><a href="https://linktr.ee/ozrafi" target="_blank">Linktree</a></li>
-        </ul>
-    </nav>
-    <main class="container">
-        <h1>Selamat datang di github pages rfsyhb!</h1>
-        <p>Beberapa latihan yang telah blud lakukan :</p>
-        <ul>
-            <li><a href="mogalaku/index.html">mogalaku</a></li>
-            <li><a href="color-flipper/index.html">color flipping</a></li>
-            <li><a href="coba-coba/index.html">coba-coba</a></li>
-            <li><a href="dicoding/index.html">dicoding learning</a></li>
-        </ul>
+    <header class="navbar-container">
+        <!-- logo pada sisi kiri nav -->
+        <div class="logo">
+            <img src="dicoding/tugas-akhir-membuat-website/assets/img/logo-name-rafi.png" alt="Rafi Syihab">
+        </div>
+        <!-- navigasi ke sections dalam halaman website -->
+        <nav class="nav-list">
+            <ul>
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#portofolio" class="nav-link">Portofolio</a></li>
+                <li><a href="#about" class="nav-link">about</a></li>
+                <li><a href="#testimonial" class="nav-link">Testimonial</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-description">
+                <h1 class="title">Rafi Syihab | React & Back-End Developer</h1>
+                <p><em>Full-stack web developer</em> dengan Passion untuk Menciptakan Aplikasi Web yang Inovatif dan
+                    <em>User-Friendly</em>. Saya mengkhususkan diri dalam mengembangkan solusi yang dinamis dan
+                    intuitif. Ketika tidak sedang mengejar <em>deadline</em>, saya memanfaatkan waktu untuk mengasah
+                    kemampuan dengan menerapkan teknik <em>one commit everyday</em>.
+                </p>
+
+                <!-- Pergi ke github pages -->
+                <button id="portoButton" type="button">Learning Journey</button>
+            </div>
+
+            <div class="hero-image">
+                <img src="dicoding/tugas-akhir-membuat-website/assets/img/logo-rafi.png" alt="logo character">
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <div class="container">
+            <div class="content">
+                <article class="portofolio" id="portofolio">
+                    <h2>Latest Project</h2>
+                    <div class="porto-list">
+                        <section class="project">
+                            <div class="project-image">
+                                <img src="dicoding/tugas-akhir-membuat-website/assets/img/porto1-coffeean.png" alt="CoffeeanCo">
+                            </div>
+                            <div class="project-description">
+                                <p><em>Website</em> penjualan biji kopi dengan penerapan teknik <em>up selling.</em></p>
+                                <a href="https://coffeeancuy.000webhostapp.com/" target="_blank">Ingin Melihat?</a>
+                            </div>
+                        </section>
+                        <section class="project">
+                            <div class="project-image">
+                                <img src="dicoding/tugas-akhir-membuat-website/assets/img/porto2-profilbandung.png" alt="Profil Bandung">
+                            </div>
+                            <div class="project-description">
+                                <p><em>Website</em> profil dari kota Bandung</p>
+                                <a href="https://rfsyhb.github.io/dicoding/dasar-pemrograman-web/index.html"
+                                    target="_blank">Ingin Melihat?</a>
+                            </div>
+                        </section>
+                        <section class="project">
+                            <div class="project-image">
+                                <img src="dicoding/tugas-akhir-membuat-website/assets/img/porto3-landingpagedicoding.png" alt="Landing Page Dicoding">
+                            </div>
+                            <div class="project-description">
+                                <p><em>Website landing page</em> Dicoding Indonesia.</p>
+                                <a href="https://rfsyhb.github.io/dicoding/dasar-pemrograman-web/index.html"
+                                    target="_blank">Ingin Melihat?</a>
+                            </div>
+                        </section>
+                    </div>
+                </article>
+
+                <article class="about" id="about">
+                    <h2>Tentang Saya</h2>
+                    <p>Halo! Saya Rafi Syihab, seorang <em>cohort</em> Dicoding <em>path</em> Pengembang <em>React &
+                            Back-End</em>. Saya adalah peserta studi independen yang antusias, sedang menempuh
+                        perjalanan belajar intensif di Dicoding sebagai calon <em>full-stack web developer</em>. Fokus
+                        saya saat ini adalah mengasah keahlian dalam <em>React</em> untuk <em>front-end</em>
+                        dan teknologi <em>back-end</em> yang sesuai dengan standar industri. Saya berkomitmen untuk
+                        mengembangkan aplikasi web yang tidak hanya inovatif dan <em>user-friendly</em>, tetapi juga
+                        yang memenuhi kebutuhan nyata pengguna. Di saat senggang, waktu saya diisi dengan belajar konsep
+                        baru dan meningkatkan kemampuan pemrograman sambil meluangkan waktu untuk bermain dan
+                        mengeksplorasi hobi.
+                    </p>
+                    <section class="skill card">
+                        <h3>Keahlian</h3>
+                        <p>
+                            Saya telah mengembangkan keahlian dalam beberapa pemrograman yaitu Python, Java, HTML, CSS,
+                            PHP, dan JavaScript.
+                        </p>
+                        <div class="skill-container">
+                            <article class="skill-card">
+                                <h4>Python</h4>
+                                <p>Desain dan implementasi algoritma <em>shortest path</em> untuk menyelesaikan masalah
+                                    rute terpendek, serta pengembangan skrip untuk <em>scanning pixel</em> pada layar
+                                    secara otomatis.</p>
+                            </article>
+                            <article class="skill-card">
+                                <h4>Java</h4>
+                                <p>Pengembangan game Flappy Bird versi sederhana menggunakan Java, termasuk mekanisme
+                                    kontrol dan skor, serta pembuatan kalkulator.
+                                </p>
+                            </article>
+                            <article class="skill-card">
+                                <h4>HTML</h4>
+                                <p>Penataan struktur <em>website</em> dengan HTML, menggunakan elemen-elemen semantik
+                                    untuk meningkatkan aksesibilitas dan SEO.</p>
+                            </article>
+                            <article class="skill-card">
+                                <h4>CSS</h4>
+                                <p>Penerapan CSS untuk mendesain halaman web yang responsif dan menarik, meliputi
+                                    <em>layout</em>, tipografi, dan skema warna.
+                                </p>
+                            </article>
+                            <article class="skill-card">
+                                <h4>PHP</h4>
+                                <p><em>Development</em> web dinamis dengan PHP, termasuk manipulasi data dan interaksi
+                                    dengan basis data MySQL untuk aplikasi web yang interaktif.</p>
+                            </article>
+                            <article class="skill-card">
+                                <h4>JavaScript</h4>
+                                <p><em>Enhancement</em> interaktivitas pada halaman web dengan manipulasi DOM dan
+                                    penanganan <em>event</em> menggunakan JavaScript.
+                                </p>
+                            </article>
+                        </div>
+                    </section>
+
+                    <section class="testimonial card" id="testimonial">
+                        <h3>Rafi Syihab di Mata Orang Lain</h3>
+                        <div class="testimonial-container">
+                            <section class="testimonial-content">
+                                <figure>
+                                    <blockquote>
+                                        <q>Bekerja sama dengan Rafi adalah pengalaman yang memperkaya. Dia tidak hanya
+                                            memenuhi ekspektasi kami dengan solusi koding yang efisien dan inovatif,
+                                            tetapi juga menambahkan nilai luar biasa dengan pandangannya yang
+                                            strategis.</q>
+                                        <figcaption>— Hidayat, Teman Sekelas Jurusan Teknik Informatika</figcaption>
+                                    </blockquote>
+                                </figure>
+                            </section>
+                            <section class="testimonial-content">
+                                <figure>
+                                    <blockquote>
+                                        <q>Saya berkesempatan bekerja bersama Rafi dalam beberapa proyek pengembangan
+                                            web. Saya selalu terkesan dengan pendekatan sistematis dan perhatiannya
+                                            terhadap detail.</q>
+                                        <figcaption>— Azizah, Teman Sekelas Jurusan Teknik Informatika</figcaption>
+                                    </blockquote>
+                                </figure>
+                            </section>
+                            <section class="testimonial-content">
+                                <figure>
+                                    <blockquote>
+                                        <q>Rafi adalah salah satu programmer terbaik yang saya kenal di kampus. Dia
+                                            selalu punya solusi kreatif untuk setiap masalah coding yang kita hadapi
+                                            bersama. Apa yang saya kagumi adalah kemampuannya untuk mengajari orang lain
+                                            dengan sabar, membuat konsep yang
+                                            kompleks menjadi mudah dipahami. Saya yakin dia akan menjadi aset berharga
+                                            di mana pun dia bekerja.</q>
+                                        <figcaption>— Halim, Teman Sekelas Jurusan Teknik Informatika</figcaption>
+                                    </blockquote>
+                                </figure>
+                            </section>
+                        </div>
+                    </section>
+                </article>
+            </div>
+
+            <aside>
+                <div class="profile card">
+                    <header>
+                        <figure>
+                            <img src="dicoding/tugas-akhir-membuat-website/assets/img/gambar-rafi.png" alt="Rafi Syihab">
+                            <figcaption>
+                                <h3>Rafi Syihab</h3>
+                                <p>Web Developer</p>
+                            </figcaption>
+                        </figure>
+                    </header>
+
+                    <section class="profile-description">
+                        <p>Full-Stack Web Developer, heavy eye bags, dehydrated, and caffeinated</p>
+                        <a href="mailto:rafisyihab3@gmail.com" class="profile-email">rafisyihab3@gmail.com</a>
+                    </section>
+                    <section class="profile-social-links">
+                        <a href="https://github.com/rfsyhb" target="_blank" class="fab fa-github"></a>
+                        <a href="https://id.linkedin.com/in/rafi-syihab-9020a51a0" target="_blank"
+                            class="fab fa-linkedin-in"></a>
+                        <a href="https://www.facebook.com/OzRafi/" target="_blank" class="fab fa-facebook"></a>
+                        <a href="https://www.instagram.com/ozrafi/" target="_blank" class="fab fa-instagram"></a>
+                    </section>
+                </div>
+                <div class="journey card" id="journey">
+                    <div class="journey-title">
+                        <h3>Learning Journey</h3>
+                    </div>
+                    <div class="journey-link">
+                        <ul>
+                            <li><a href="mogalaku/index.html">mogalaku</a></li>
+                            <li><a href="color-flipper/index.html">color flipping</a></li>
+                            <li><a href="coba-coba/index.html">coba-coba</a></li>
+                            <li><a href="dicoding/index.html">dicoding learning</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+        </div>
     </main>
-    <footer class="container">
-        <small>&copy; 2024 rfsyhb</small>
+
+    <footer>
+        <p>&copy; 2024 Rafi Syihab. All rights reserved.</p>
     </footer>
+
+    <!-- load script ketika DOM dimuat -->
+    <script src="dicoding/tugas-akhir-membuat-website/assets/js/app.js"></script>
 </body>
+
 </html>
