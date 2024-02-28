@@ -1,6 +1,8 @@
-// ! button untuk pergi ke github
-document.getElementById('githubButton').addEventListener('click', function () {
-    window.open('https://rfsyhb.github.io/dicoding/index.html', '_blank');
+// ! button untuk pergi ke id journey
+document.getElementById('portoButton').addEventListener('click', function () {
+    document.querySelector('#journey').scrollIntoView({
+        behavior: 'smooth' // Opsi untuk animasi scroll yang halus
+    });
 });
 
 // ! animasi scroll
