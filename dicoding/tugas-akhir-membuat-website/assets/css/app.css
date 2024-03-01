@@ -338,7 +338,15 @@ div.content .about {
     gap: 1rem;
 }
 
-div.content .about>h2,
+div.content .about>p,
+div.content .about>h2 {
+    padding: 0 1.2rem;
+}
+
+div.content .about>h2 {
+    margin-bottom: 0.2em;
+}
+
 div.content .about>p {
     margin-top: 0;
 }
