@@ -1,8 +1,8 @@
-// ! Console log pertama
+// ! quiz 1: Console log pertama
 // @TODO: Cetak teks "Saya mulai belajar JavaScript!" ke console
 console.log('Saya mulai belajar JavaScript!')
 
-// ! Variabel dan Tipe Data
+// ! quiz 2: Variabel dan Tipe Data
 /**
  * TODO:
  * Buatlah variabel firstName, lastName, age, isMarried dengan ketentuan:
@@ -25,7 +25,7 @@ console.log(`lastName nilainya ${lastName} dan tipe datanya ${typeof (lastName)}
 console.log(`age nilainya ${age} dan tipe datanya ${typeof (age)}`)
 console.log(`isMarried nilainya ${isMarried} dan tipe datanya ${typeof (isMarried)}`)
 
-// ! Logika Operator dan If Else
+// ! quiz 3: Logika Operator dan If Else
 /**
  * Buatlah logika if untuk mengevaluasi nilai score dengan ketentuan:
  *  1. Jika score bernilai 90 atau lebih
@@ -77,3 +77,85 @@ console.log(scoreChecker(20));
 // menguji nilai jika 60
 console.log(scoreChecker(60));
 
+if ((true || false) && (false || false)) {
+    console.log("It's true");
+} else {
+    console.log("It's false");
+}
+
+for (let i = 1; i < 9; i += 2) {
+    console.log(i);
+}
+
+for (let i = 1; i < 10; i += 2) {
+    console.log(i);
+}
+
+for (let i = 0; i < 10; i++) {
+    if (i % 2 !== 0) {
+        console.log(i);
+    }
+}
+
+const firstString = "Hello";
+const secondString = "JavaScript";
+
+console.log(firstString + secondString);
+
+// * Object dan assignment operator untuk properti
+const spaceship = {
+    name: "Millenium Falcon",
+    manufacturer: "Corellian Engineering Corporation",
+    maxSpeed: 1200,
+    color: "Light gray"
+};
+
+spaceship.color = "Glossy red";
+spaceship["maxSpeed"] = 1300;
+spaceship.class = "Light freighter";
+// ! ini akan error
+// spaceship = { name: "New Millenium Falcon" }; 
+console.log(spaceship);
+
+{
+    // ! quiz 4: object
+    /**
+     * TODO
+     * 1. Buatlah variabel dengan nama restaurant yang bertipe object dengan ketentuan berikut:
+     *    - Memiliki properti bernama "name"
+     *       - Bertipe data string
+     *       - Bernilai "Bakso Mang Dicoding".
+     *    - Memiliki properti bernama "city"
+     *       - Bertipe data string
+     *       - Bernilai "Bandung".
+     *    - Memiliki properti "favorite drink"
+     *       - Bertipe data string
+     *       - Bernilai "Es Teh".
+     *    - Memiliki properti "favorite food"
+     *       - Bertipe data string
+     *       - Bernilai "Bakso".
+     *    - Memiliki properti "isVegan"
+     *       - Bertipe data boolean
+     *       - Bernilai false.
+     *
+     * 2. Buatlah variabel bernama name.
+     *    Kemudian isi dengan nilai name dari properti object restaurant
+     * 3. Buatlah variabel bernama favoriteDrink.
+     *    Kemudian isi dengan nilai "favorite drink" dari properti object restaurant
+     */
+
+    // Tulis kode di bawah ini
+    const restaurant = {
+        name: "Bakso Mang Dicoding",
+        city: "Bandung",
+        "favorite drink": "Es Teh",
+        "favorite food": "Bakso",
+        isVegan: false,
+    }
+
+    // mencoba menggunakan deconstruct dan assign ke local variable name
+    let { name, "favorite drink": favoriteDrink } = restaurant;
+
+    // menguji
+    console.log(`Variabel name bernilai ${name} dan variabel favoriteDrink bernilai ${favoriteDrink}`)
+}
