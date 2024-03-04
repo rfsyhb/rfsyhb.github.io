@@ -237,3 +237,173 @@ for (let i = 0; i < 10; i++) {
     delete artistsAndSongs["Keyakizaka46"];
     console.log(artistsAndSongs)
 }
+
+{
+    // ! quiz 7: function
+    /**
+     * TODO:
+     * 1. Buatlah fungsi bernama minimal dengan ketentuan berikut:
+     *    - Menerima dua buah argumen number, a dan b.
+     *    - Mengembalikan nilai terkecil antara a atau b.
+     *    - Bila nilai keduanya sama, maka kembalikan dengan nilai a
+     *
+     *    contoh:
+     *    minimal(1, 4) // output: 1
+     *    minimal(3, 2) // output: 2
+     *    minimal(3, 3) // output: 3
+     *
+     * 2. Buatlah sebuah function bernama findIndex yang menerima dua parameter, yaitu array dan number.
+     *    Fungsi tersebut harus mengembalikan index dari angka yang sesuai pada array tersebut.
+     *    Jika angka tidak ditemukan, maka kembalikan nilai -1.
+     *
+     *    contoh:
+     *    findIndex([1, 2, 3, 4, 5], 3) // output: 2
+     *    findIndex([1, 2, 3, 4, 5], 6) // output: -1
+     *    findIndex([1, 2, 3, 4, 5], 5) // output: 4
+    */
+
+    // Tulis kode di bawah ini
+
+    // 1. Membuat function untuk return nilai terkecil
+    // membuat arrow function
+    const minimal = (a, b) => {
+        if (a <= b) {
+            return a;
+        } else {
+            return b;
+        }
+    }
+
+    // pengujian minimal
+    console.log(minimal(1, 4))
+    console.log(minimal(3, 2))
+    console.log(minimal(3, 3))
+
+    // 2. Arrow function untuk array dan number
+    const findIndex = (array, number) => {
+        // for loop
+        for (let i = 0; i < array.length; i++) {
+            // jika nilainya sesuai
+            if (array[i] === number) {
+                // return index-nya
+                return i;
+            }
+        }
+        // jika tidak ditemukan dari for di atas maka return berikut
+        return -1;
+    }
+
+    // pengujian findIndex
+    console.log(findIndex([1, 2, 3, 4, 5], 3))
+    console.log(findIndex([1, 2, 3, 4, 5], 6))
+    console.log(findIndex([1, 2, 3, 4, 5], 5))
+}
+
+{
+    function minMax(arrayOfNumbers) {
+        let currentMin = arrayOfNumbers[0];
+        let currentMax = arrayOfNumbers[0];
+        for (value of arrayOfNumbers) {
+            if (value < currentMin) {
+                currentMin = value;
+            } else if (value > currentMax) {
+                currentMax = value;
+            }
+        }
+
+        console.log(`currentMin: ${currentMin}, currentMax: ${currentMax}`);
+    }
+
+    minMax([8, -6, 0, 9, 40, 2, 23, 50, 2, -3, -15, 15, -23, 71]);
+}
+
+{
+    function multiply(num) {
+        total = num * num;
+    }
+
+    const result = multiply(3);
+
+    console.log(result);
+}
+
+{
+    const car = {
+        brand: 'Ford',
+        color: 'red',
+        maxSpeed: 200,
+        chassisNumber: 'f-1',
+        drive: () => {
+            console.log('driving');
+        },
+        reverse: () => {
+            console.log('reversing');
+        },
+        turn: () => {
+            console.log('turning');
+        }
+    }
+}
+
+{
+    function Car(brand, color, maxSpeed, chassisNumber) {
+        this.brand = brand;
+        this.color = color;
+        this.maxSpeed = maxSpeed;
+        this.chassisNumber = chassisNumber;
+    }
+
+    Car.prototype.drive = function () {
+        console.log(`${this.brand} ${this.color} is driving`);
+    }
+
+    Car.prototype.reverse = function () {
+        console.log(`${this.brand} ${this.color} is reversing`);
+    }
+
+    Car.prototype.turn = function () {
+        console.log(`${this.brand} ${this.color} is turning`);
+    }
+
+    // Membuat objek mobil dengan constructor function Car
+    const car1 = new Car('Toyota', 'Silver', 200, 'to-1');
+    const car2 = new Car('Honda', 'Black', 180, 'ho-1');
+    const car3 = new Car('Suzuki', 'Red', 220, 'su-1');
+
+    console.log(car1);
+    car1.drive();
+}
+
+{
+    class Car {
+        constructor(brand, color, maxSpeed, chassisNumber) {
+            this.brand = brand;
+            this.color = color;
+            this.maxSpeed = maxSpeed;
+            this.chassisNumber = chassisNumber;
+        }
+
+        drive() {
+            console.log(`${this.brand} ${this.color} is driving`);
+        }
+
+        reverse() {
+            console.log(`${this.brand} ${this.color} is reversing`);
+        }
+
+        turn() {
+            console.log(`${this.brand} ${this.color} is turning`);
+        }
+    }
+
+    // Membuat objek mobil dengan constructor function Car
+    const car1 = new Car('Toyota', 'Silver', 200, 'to-1');
+    const car2 = new Car('Honda', 'Black', 180, 'ho-1');
+    const car3 = new Car('Suzuki', 'Red', 220, 'su-1');
+
+    console.log(car1);
+    console.log(car2);
+    console.log(car3);
+
+    car1.drive();
+}
