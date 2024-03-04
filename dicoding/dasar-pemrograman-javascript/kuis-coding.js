@@ -407,3 +407,140 @@ for (let i = 0; i < 10; i++) {
 
     car1.drive();
 }
+
+{
+    const date = new Date();
+
+    const timeInJakarta = date.toLocaleString('id-ID', {
+        timeZone: 'Asia/Jakarta',
+    });
+
+    const timeInTokyo = date.toLocaleString('ja-JP', {
+        timeZone: 'Asia/Tokyo',
+    });
+
+    const timeInMakassar = date.toLocaleString('id-ID', {
+        timeZone: 'Asia/Makassar',
+    });
+
+    console.log(timeInJakarta);
+    console.log(timeInTokyo);
+    console.log(timeInMakassar);
+
+    /**
+    * Output:
+    * 22/12/2022 10.37.14
+    * 2022/12/22 12:37:14
+    * 22/12/2022 11.37.14
+    */
+}
+
+{
+    class UniqueArray extends Array {
+        constructor(...args) {
+            // make sure args is unique before passing it to super
+            const uniqueValue = args.filter((item, index) => args.indexOf(item) === index);
+
+            super(...uniqueValue);
+        }
+
+        push(item) {
+            // make sure only unique item is added
+            if (!this.includes(item)) {
+                super.push(item);
+            }
+        }
+    }
+
+    const someArray = new UniqueArray('a', 'b', 'c', 'a', 'b', 'c');
+    console.log(someArray); // ['a', 'b', 'c']
+    someArray.push('d');
+    console.log(someArray); // ['a', 'b', 'c', 'd']
+    someArray.push('a');
+    console.log(someArray); // ['a', 'b', 'c', 'd']
+}
+
+{
+    // ! quiz 8: Object-oriented programming
+    /**
+     * TODO:
+     * 1. Buatlah class bernama Animal dengan ketentuan:
+     *    - Memiliki properti:
+     *      - name: string
+     *      - age: int
+     *      - isMammal: boolean
+     *    - Memiliki constructor untuk menginisialisasi properti:
+     *      - name
+     *      - age
+     *      - isMammal
+     * 2. Buatlah class bernama Rabbit dengan ketentuan:
+     *    - Merupakan turunan dari class Animal
+     *    - Memiliki method:
+     *      - eat yang mengembalikan nilai string `${this.name} sedang makan!`
+     *    - Ketika diinstansiasi, properti isMammal harus bernilai true
+     * 3. Buatlah class bernama Eagle dengan ketentuan:
+     *    - Merupakan turunan dari class Animal
+     *    - Memiliki method:
+     *      - fly yang mengembalikan nilai string `${this.name} sedang terbang!`
+     *    - Ketika diinstansiasi, properti isMammal harus bernilai false
+     * 4. Buatlah instance dari class Rabbit bernama "myRabbit" dengan ketentuan:
+     *    - properti name bernilai: "Labi"
+     *    - properti age bernilai: 2
+     * 5. Buatlah instance dari class Eagle bernama "myEagle" dengan ketentuan:
+     *    - properti name bernilai: "Elo"
+     *    - properti age bernilai: 4
+     */
+
+    // Tulis kode di bawah ini
+    class Animal {
+        constructor(name = '', age = 0, isMammal = false) {
+            this.name = name;
+            this.age = age;
+            this.isMammal = isMammal;
+        }
+    }
+
+    // membuat class rabbit
+    class Rabbit extends Animal {
+        constructor(name = '', age = 0) {
+            let isMammal = true;
+            super(name, age, isMammal)
+        }
+
+        eat() {
+            return `${this.name} sedang makan!`;
+        }
+    }
+
+    // membuat class eagle
+    class Eagle extends Animal {
+        constructor(name = '', age = 0) {
+            let isMammal = false;
+            super(name, age, isMammal)
+        }
+
+        fly() {
+            return `${this.name} sedang terbang!`;
+        }
+    }
+
+    // membuat instance kedua hewan
+    const myRabbit = new Rabbit('Labi', 2);
+    const myEagle = new Eagle('Elo', 4);
+
+    // menguji nilai
+    console.log(myRabbit)
+    console.log(myEagle)
+}
+
+{
+    function car({ brand, maxSpeed, wheelCount }) {
+        this.brand = brand;
+        this.maxSpeed = maxSpeed;
+        this.wheelCount = wheelCount;
+    }
+
+    const myCar = new car({ brand: 'Toyota', maxSpeed: 200, wheelCount: 4 });
+
+    console.log(myCar)
+}
