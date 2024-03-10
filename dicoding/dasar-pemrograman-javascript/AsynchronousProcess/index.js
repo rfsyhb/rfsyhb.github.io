@@ -487,37 +487,25 @@ const quiz12 = () => {
     getTollAccess();
 }
 
-
-// ! Modul Node Package Manager
-import _ from 'lodash';
-
-const tanpaLodashSum = () => {
-    const myArray = [1, 2, 3, 4];
-    let sum = 0;
-
-    for (let i = 0; i < myArray.length; i++) {
-        sum += myArray[i];
+const cobaujian = () => {
+    try {
+        const arr = [1, 2, 3, 4];
+        for (let i = 0; i <= 4; i++) {
+            console.log(arr[i]);
+        }
+    } catch (e) {
+        console.log("Out of bounds");
     }
-
-    console.log(sum);
 }
 
-const tanpaLodashReduce = () => {
-    const myArray = [1, 2, 3, 4];
-    let sum = myArray.reduce((prev, curr) => {
-        return prev + curr;
-    });
-
-    console.log(sum);
+function findMax(a, b, c) {
+    if (a > b || a > c) {
+        return a;
+    } else if (b > a || b > c) {
+        return b;
+    } else {
+        return c;
+    }
 }
 
-const denganLodash = () => {
-    const myArray = [1, 2, 3, 4];
-    const sum = _.sum(myArray);
-
-    console.log(sum);
-}
-
-tanpaLodashSum();
-tanpaLodashReduce();
-denganLodash();
+console.log(findMax(5,1,2));

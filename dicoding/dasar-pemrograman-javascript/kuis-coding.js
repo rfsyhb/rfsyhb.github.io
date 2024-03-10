@@ -579,3 +579,101 @@ for (let i = 0; i < 10; i++) {
     // menguji hasilnya
     console.log(greatAuthors)
 }
+
+{
+    if ((true || false) && (false || false)) {
+        console.log("It's true");
+    } else {
+        console.log("It's false");
+    }
+}
+
+{
+    let myVariable = 12;
+    myVariable = 30;
+    myVariable = 5;
+
+    console.log(myVariable);
+}
+
+{
+    const name = 'Dicoding';
+    const language = 'JavaScript';
+
+    console.log(`Hello $name. Welcome to $language!`);
+}
+
+{
+    const artistsAndSongs = {
+        "Keyakizaka46": ["Silent Majority"],
+        "Blackpink": ["How You Like That", "Ice Cream"],
+        "JKT48": ["Rapsodi", "Heavy Rotation"],
+        "Twice": ["What is Love?"],
+    }
+
+    artistsAndSongs["Babymetal"] = ["Gimme chocolate"];
+    delete artistsAndSongs["Keyakizaka46"];
+    artistsAndSongs["Blackpink"].push("Rose - Gone");
+
+    console.log(artistsAndSongs);
+}
+
+{
+    const capital = {
+        "Jakarta": "Indonesia",
+        "London": "England",
+        "Tokyo": "Japan"
+    }
+    capital["New Delhi"] = "Indonesia";
+
+    console.log(capital["Indonesia"]);
+}
+
+{
+    function multiply(num) {
+        total = num * num;
+    }
+
+    const result = multiply(3);
+
+    console.log(result);
+}
+
+{
+    function car({ brand, maxSpeed, wheelCount }) {
+        this.brand = brand;
+        this.maxSpeed = maxSpeed;
+        this.wheelCount = wheelCount;
+    }
+
+    // const myCar = new car({ brand: 'Toyota', maxSpeed: 200, wheelCount: 4 });
+    const myCar = car({ brand: 'Toyota', maxSpeed: 200, wheelCount: 4 });
+    console.log(myCar)
+}
+
+{
+    class Car { }
+    const car = new Car();
+    console.log(typeof Car);
+}
+
+{
+    const adder = (first) => (second) => first + second;
+
+    const addByOne = adder(1);
+    const addByTwo = adder(2);
+
+    console.log(addByOne(4));
+    console.log(addByTwo(3));
+}
+
+{
+    try {
+        const arr = [1, 2, 3, 4];
+        for (let i = 0; i <= 4; i++) {
+            console.log(arr[i]);
+        }
+    } catch(e) {
+        console.log("Out of bounds");
+    }
+}
