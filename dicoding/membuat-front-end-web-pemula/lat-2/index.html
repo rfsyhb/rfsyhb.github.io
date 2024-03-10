@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contoh Penggunaan DOM Selector</title>
+</head>
+<body>
+
+<h1 class="judul">Judul Halaman</h1>
+<p class="deskripsi">Ini adalah paragraf pertama.</p>
+<p class="deskripsi">Ini adalah paragraf kedua.</p>
+<p name="paragrafNama">Paragraf dengan nama 'paragrafNama'.</p>
+
+<button onclick="ubahWarnaKelas()">Ubah Warna Kelas</button>
+<button onclick="ubahWarnaNama()">Ubah Warna Nama</button>
+<button onclick="ubahWarnaTag()">Ubah Warna Tag</button>
+
+<script>
+    function ubahWarnaKelas() {
+        var elemenKelas = document.getElementsByClassName("deskripsi");
+        for (var i = 0; i < elemenKelas.length; i++) {
+            elemenKelas[i].style.color = "blue";
+        }
+    }
+
+    function ubahWarnaNama() {
+        var elemenNama = document.getElementsByName("paragrafNama");
+        for (var i = 0; i < elemenNama.length; i++) {
+            elemenNama[i].style.color = "red";
+        }
+    }
+
+    function ubahWarnaTag() {
+        var elemenTag = document.getElementsByTagName("h1");
+        for (var i = 0; i < elemenTag.length; i++) {
+            elemenTag[i].style.color = "green";
+        }
+    }
+</script>
+
+</body>
+</html>
