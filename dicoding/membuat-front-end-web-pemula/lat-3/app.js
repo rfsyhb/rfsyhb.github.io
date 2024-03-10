@@ -1,3 +1,4 @@
+// TODO 1: Manipulasi atribut dengan setAttribute()
 // deklarasi variable
 const gambar = document.getElementById('gambar');
 
@@ -31,3 +32,28 @@ const playButton = buttons[3];
 const playButtonElement = playButton.children[0];
 
 playButtonElement.setAttribute('type', 'submit');
+
+// TODO 2: Manipulasi konten melalui innerText, innerHTML, style.property
+// mengambil elemen terlebih dahulu
+const dicoding = document.getElementById('dicodingLink');
+
+// merubah isinya
+dicoding.innerText = 'Belajar Programming <strong>di Dicoding<strong>';
+
+// coba untuk link google
+const google = document.querySelector('#googleLink');
+/*
+* element
+* .class
+* #id
+* [name="x"]
+*/
+google.innerHTML = 'Mencari sesuatu di <em><strong>Google<strong><em>';
+
+// ! manipulasi style konten dengna style.property
+// * melakukan perulangan untuk <div> class "button" dan mengambil child[0] yaitu <button>
+for (const button of buttons) {
+    console.log(button.children[0].style.borderRadius = '6px');
+}
+// kenapa borderRadius bukan border-radius seperti CSS? 
+// ! mengikut standar penamaan khusus, menjadi camelCase tanpa '-'

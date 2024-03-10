@@ -12,14 +12,28 @@
             margin: 8px;
             padding: 3px;
         }
-        .container {
+
+        main {
+            margin: 2px;
+        }
+
+        .main {
             text-align: center;
+        }
+
+        hr {
+            border: none;
+            /* Menghapus garis bawaan */
+            border-top: 2px solid black;
+            /* Menambahkan garis baru */
+            width: 95%;
+            /* Menentukan lebar garis */
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
+    <div class="main">
         <h2>Its Cube Time!</h2>
         <img id="gambar"
             src="https://dicoding-web-img.sgp1.cdn.digitaloceanspaces.com/original/commons/homepage-dicoding-challenge-illustration.png"
@@ -36,12 +50,21 @@
                 <button><i>Fun Fact</i></button>
             </div>
             <div class="button">
-                <button>Play (Coming Soon)</button>
+                <button disabled="disabled">Play (Coming Soon)</button>
             </div>
             <div class="button">
                 <button>Exit</button>
             </div>
         </div>
+    </div>
+
+    <hr>
+    <div id="links">
+        <p>Situs lainnya yang tidak kalah menarik:</p>
+        <ul>
+            <li><a href="http://www.dicoding.com" id="dicodingLink">Dicoding</a></li>
+            <li><a href="http://www.google.com" id="googleLink">Google</a></li>
+        </ul>
     </div>
 
     <script src="app.js"></script>
