@@ -20,4 +20,16 @@ document.addEventListener('DOMContentLoaded', function () {
             document.getElementById('notifikasiSisaKarakter').style.color = 'black';
         }
     });
+
+    // ! memunculkan span ketika berinteraksi (melakukan input) dengan input id="inputNama"
+    document.getElementById('inputNama').addEventListener('focus', function () {
+        console.log('inputNama: focus');
+        document.getElementById('notifikasiSisaKarakter').style.visibility = 'visible';
+    });
+
+    // ! menjadikan hidden kembali jika tidak berinteraksi dengan inputNama
+    document.getElementById('inputNama').addEventListener('blur', function () {
+        console.log('inputNama: blur');
+        document.getElementById('notifikasiSisaKarakter').style.visibility = 'hidden';
+    });
 });

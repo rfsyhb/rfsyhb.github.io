@@ -13,3 +13,7 @@
     margin: 8px;
     text-align: left;
 }
+
+#notifikasiSisaKarakter {
+    visibility: hidden;
+}
