@@ -7,6 +7,8 @@ document.addEventListener("DOMContentLoaded", function () {
   // menyimpan data object todo
   const todos = [];
   const RENDER_EVENT = "render-todo";
+  const SAVED_EVENT = "saved-todo";
+  const STORAGE_KEY = 'TODO_APPS';
 
   // id form
   const submitForm = document.getElementById("form");
@@ -34,6 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // me-render data yang telah disimpan pada array todos
     document.dispatchEvent(new Event(RENDER_EVENT));
+    saveData();
   }
 
   // membuat identitas unik tiap item
@@ -125,6 +128,7 @@ document.addEventListener("DOMContentLoaded", function () {
     return container;
   }
 
+  // > remove todo
   function removeTaskFromCompleted(todoId) {
     const todoTarget = findTodoIndex(todoId);
 
@@ -132,8 +136,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     todos.splice(todoTarget, 1);
     document.dispatchEvent(new Event(RENDER_EVENT));
+    // menyimpan ke local
+    saveData();
   }
 
+  // > undo todo
   function undoTaskFromCompleted(todoId) {
     const todoTarget = findTodo(todoId);
 
@@ -141,8 +148,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     todoTarget.isCompleted = false;
     document.dispatchEvent(new Event(RENDER_EVENT));
+    // menyimpan ke local
+    saveData();
   }
 
+  // > add todo
   function addTaskToCompleted(todoId) {
     const todoTarget = findTodo(todoId);
 
@@ -150,6 +160,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     todoTarget.isCompleted = true;
     document.dispatchEvent(new Event(RENDER_EVENT));
+    // menyimpan ke local
+    saveData();
   }
 
   // mengambil object yang sesuai dengai id
@@ -172,13 +184,25 @@ document.addEventListener("DOMContentLoaded", function () {
     return -1;
   }
 
-  // ! contoh hasil return-nya
-  /*
-   * <div id="todo-<todo_id>" class="item shadow">
-   *     <div class="inner">
-   *         <h2>Tugas Android</h2>
-   *         <p>2021-05-01</p>
-   *     </div>
-   * </div>
-   */
+  // > menyimpan data
+  function saveData() {
+    if (isStorageExist()) {
+      const parsed = JSON.stringify(todos);
+      localStorage.setItem(STORAGE_KEY, parsed);
+      document.dispatchEvent(new Event(SAVED_EVENT));
+    }
+  }
+  
+  // memastikan storage supported
+  function isStorageExist() /* boolean */ {
+    if (typeof Storage === undefined) {
+      alert("Browser kamu tidak mendukung local storage");
+      return false;
+    }
+    return true;
+  }
+
+  document.addEventListener(SAVED_EVENT, function () {
+    console.log(localStorage.getItem(STORAGE_KEY));
+  });
 });
