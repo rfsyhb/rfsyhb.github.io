@@ -50,25 +50,38 @@ const localMaximumAttemptsKey = "LOCAL_MAXIMUM_ATTEMPTS";
 
 // > Tahap kedua
 window.addEventListener("load", function () {
+  // * set nilai awal
   if (typeof Storage !== "undefined") {
     // (MATERI 1)
     // inisialisasi semua item web storage yang kita akan gunakan jika belum ada
+    // * session answerKey
     if (sessionStorage.getItem(sessionAnswerKey) === null) {
       sessionStorage.setItem(sessionAnswerKey, "");
     }
+    // * session userAttempt
     if (sessionStorage.getItem(sessionUserAttemptsKey) === null) {
       sessionStorage.setItem(sessionUserAttemptsKey, 0);
     }
+    // * session userIsPlaying
     if (sessionStorage.getItem(sessionUserIsPlayingKey) === null) {
       sessionStorage.setItem(sessionUserIsPlayingKey, false);
     }
+    // * local totalVictory
     if (localStorage.getItem(localTotalVictoryKey) === null) {
       localStorage.setItem(localTotalVictoryKey, 0);
     }
+    // * localMaxAttempts
     if (localStorage.getItem(localMaximumAttemptsKey) === null) {
       localStorage.setItem(localMaximumAttemptsKey, 0);
     }
   } else {
     alert("Browser yang Anda gunakan tidak mendukung Web Storage");
   }
+
+  //inisialisasi semua nilai field pada dokumen yang menggunakan nilai dari web storage
+  sessionUserAttemptsField.innerText = sessionStorage.getItem(sessionUserAttemptsKey);
+  localTotalVictoryField.innerText = localStorage.getItem(localTotalVictoryKey);
+  localMaximumAttemptField.innerText = localStorage.getItem(localMaximumAttemptsKey);
+
+  
 });
