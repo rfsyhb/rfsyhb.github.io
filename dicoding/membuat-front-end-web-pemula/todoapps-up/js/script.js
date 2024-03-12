@@ -172,7 +172,7 @@ function undoTaskFromCompleted(todoId /* HTMLELement */) {
   saveData();
 }
 
-// > ketika DOM loaded
+// > ketika berhasil loaded
 document.addEventListener("DOMContentLoaded", function () {
   const submitForm /* HTMLFormElement */ = document.getElementById("form");
 
