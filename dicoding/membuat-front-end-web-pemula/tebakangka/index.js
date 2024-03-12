@@ -87,6 +87,7 @@ window.addEventListener("load", function () {
     localMaximumAttemptsKey
   );
 
+  // > ketika mengubah tampilan ketika start
   playButton.addEventListener("click", function () {
     sessionStorage.setItem(sessionAnswerKey, getAnswer());
     sessionStorage.setItem(sessionUserIsPlayingKey, true);
@@ -94,6 +95,7 @@ window.addEventListener("load", function () {
     duringGameDisplay.removeAttribute("hidden");
   });
 
+  // > tombol-tombol
   answerButton1.addEventListener("click", function () {
     sessionUserAnswerField.innerText += "1";
     if (sessionUserAnswerField.innerText.length == 3) {
@@ -115,6 +117,7 @@ window.addEventListener("load", function () {
     }
   });
 
+  // > memastikan jawaban
   function checkAnswer(userGuess) {
     const answer = sessionStorage.getItem(sessionAnswerKey);
     if (userGuess == answer) {
@@ -135,6 +138,7 @@ window.addEventListener("load", function () {
     }
   }
 
+  // > update score
   function updateScore() {
     const sessionAttemptsValue = parseInt(
       sessionStorage.getItem(sessionUserAttemptsKey)
@@ -162,5 +166,15 @@ window.addEventListener("load", function () {
     sessionUserAttemptsField.innerText = sessionStorage.getItem(
       sessionUserAttemptsKey
     );
+  });
+
+  // ^ destroy seluruh data session & local
+  destroyDataButton.addEventListener("click", function () {
+    sessionStorage.removeItem(sessionAnswerKey);
+    sessionStorage.removeItem(sessionUserAttemptsKey);
+    sessionStorage.removeItem(sessionUserIsPlayingKey);
+    localStorage.removeItem(localTotalVictoryKey);
+    localStorage.removeItem(localMaximumAttemptsKey);
+    alert("Mohon me-refresh halaman ini kembali");
   });
 });
