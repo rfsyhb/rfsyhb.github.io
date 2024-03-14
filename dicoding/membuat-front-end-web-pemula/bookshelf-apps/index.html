@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookshelf App</title>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome 5.15.4 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- >header -->
+    <header class="head_bar">
+      <div class="head_bar__logo">
+        <img src="assets/img/logo-name-rafi.png" alt="Rafi Syihab" />
+      </div>
+      <div class="head_bar__title">
+        <h1>Bookshelf Apps</h1>
+      </div>
+    </header>
+
+    <!-- >main -->
+    <main>
+      <!-- ^input -->
+      <section class="input_section">
+        <h2>Masukkan Buku Baru</h2>
+        <form id="inputBook">
+          <div class="input">
+            <label for="inputBookTitle">Judul</label>
+            <input id="inputBookTitle" type="text" required/>
+          </div>
+          <div class="input">
+            <label for="inputBookAuthor">Penulis</label>
+            <input id="inputBookAuthor" type="text" required/>
+          </div>
+          <div class="input">
+            <label for="inputBookYear">Tahun</label>
+            <input id="inputBookYear" type="number" required/>
+          </div>
+          <div class="input_inline">
+            <label for="inputBookIsComplete">Selesai dibaca</label>
+            <input id="inputBookIsComplete" type="checkbox"/>
+          </div>
+          <button id="bookSubmit" type="submit">
+            Masukkan Buku ke rak <span>Belum selesai dibaca</span>
+          </button>
+        </form>
+      </section>
+
+      <!-- ^bookshelf -->
+      <section class="book_shelf_container">
+        <!-- !not completed -->
+        <section class="book_shelf">
+          <h2>Belum selesai dibaca (not completed)</h2>
+          <div id="incompleteBookshelfList" class="book_list"></div>
+        </section>
+
+        <!-- !completed -->
+        <section class="book_shelf">
+          <h2>Selesai dibaca (completed)</h2>
+          <div id="completeBookshelfList" class="book_list"></div>
+        </section>
+      </section>
+    </main>
+
+    <!-- >footer -->
+    <footer>
+      <p>&copy; 2024 Rafi Syihab. All rights reserved.</p>
+    </footer>
+
+    <!-- load script -->
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
