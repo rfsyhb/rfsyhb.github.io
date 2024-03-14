@@ -14,3 +14,4 @@ Fitur:
 
 Kesalahan:
 1. properti year tidak di-parseInt (createBookObject() dan addBook())(solved)
+2. id harus berupa string | number

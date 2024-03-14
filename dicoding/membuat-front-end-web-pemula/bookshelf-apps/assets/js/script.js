@@ -11,10 +11,10 @@ function generateId() {
 // >Membuat object
 function createBookObject(id, title, author, year, isComplete) {
   return {
-    id,
+    id: Number(id),
     title,
     author,
-    year: parseInt(year),
+    year: parseInt(year, 10),
     isComplete,
   };
 }
