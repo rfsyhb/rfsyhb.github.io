@@ -216,8 +216,9 @@ function addBookToCompleted(bookId) {
 // Fungsi untuk menghapus buku
 // =menggunakan .splice
 function removeBook(bookId) {
+  const bookObject = findBook(bookId);
   // menggunakan method bawaan JS
-  const  isConfirmed = confirm("Apakah Anda yakin ingin menghapus buku ini?");
+  const  isConfirmed = confirm(`Apakah Anda yakin ingin menghapus buku ${bookObject.title} (${bookObject.year}) ?`);
 
   if (isConfirmed) {
     // mencari index yang tepat
@@ -229,9 +230,8 @@ function removeBook(bookId) {
     books.splice(bookIndex, 1);
     document.dispatchEvent(new Event(RENDER_EVENT));
     saveData();
-  } else {
-    alert('Anda membatalkan hapus buku')
-  }
+    alert('Buku berhasil dihapus')
+  } 
 }
 
 // Fungsi untuk mengubah status isComplete buku menjadi "false"
@@ -253,24 +253,26 @@ document.addEventListener("DOMContentLoaded", function () {
   submitForm.addEventListener("submit", function (event) {
     // prevent default agar ketika submit tidak reset
     event.preventDefault();
+    // akan memanggil RENDER_EVENT
     addBook();
   });
 
   const searchForm = document.getElementById("searchBook");
   searchForm.addEventListener("submit", function (event) {
     event.preventDefault();
+    // langsung displayBooks
     searchBooks();
   });
 
   if (isStorageExist()) {
     loadDataFromStorage();
   }
+});
 
-  // Menambahkan event listener untuk RENDER_EVENT
-  document.addEventListener(RENDER_EVENT, function () {
-    // *memanggil fungsi
-    displayBooks(); // Ini akan memperbarui UI setiap kali ada perubahan pada data buku
-  });
+// Menambahkan event listener untuk RENDER_EVENT
+document.addEventListener(RENDER_EVENT, function () {
+  // *memanggil fungsi
+  displayBooks(); // Ini akan memperbarui UI setiap kali ada perubahan pada data buku
 });
 
 // >fungsi mencari book dari value input
