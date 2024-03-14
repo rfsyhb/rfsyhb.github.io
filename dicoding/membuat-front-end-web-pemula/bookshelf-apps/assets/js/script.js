@@ -230,7 +230,12 @@ function removeBook(bookId) {
     books.splice(bookIndex, 1);
     document.dispatchEvent(new Event(RENDER_EVENT));
     saveData();
-    alert('Buku berhasil dihapus')
+    
+    // memastikan web sudah dimuat ulang
+    setTimeout(() => {
+      alert('Buku berhasil dihapus');
+    }, 200);
+    // alert('Buku berhasil dihapus');
   } 
 }
 
