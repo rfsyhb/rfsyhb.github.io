@@ -11,3 +11,6 @@ Fitur:
 - Menghapus buku di kedua rak
 - Memanfaatkan localStorage untuk penyimpanan data object buku
 - Meminta konfirmasi ketika menghapus buku (menggunakan method confirm)
+
+Kesalahan:
+1. properti year tidak di-parseInt (createBookObject() dan addBook())(solved)

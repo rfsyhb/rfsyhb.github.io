@@ -14,7 +14,7 @@ function createBookObject(id, title, author, year, isComplete) {
     id,
     title,
     author,
-    year,
+    year: parseInt(year),
     isComplete,
   };
 }
@@ -76,7 +76,7 @@ function loadDataFromStorage() {
 function addBook() {
   const bookTitle = document.querySelector("#inputBookTitle").value;
   const bookAuthor = document.querySelector("#inputBookAuthor").value;
-  const bookYear = document.querySelector("#inputBookYear").value;
+  const bookYear = parseInt(document.querySelector("#inputBookYear").value);
   const bookIsComplete = document.querySelector("#inputBookIsComplete").checked;
 
   const generatedID = generateId();
