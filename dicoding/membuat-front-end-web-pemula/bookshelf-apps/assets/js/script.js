@@ -216,15 +216,22 @@ function addBookToCompleted(bookId) {
 // Fungsi untuk menghapus buku
 // =menggunakan .splice
 function removeBook(bookId) {
-  // mencari index yang tepat
-  const bookIndex = findBookIndex(bookId);
+  // menggunakan method bawaan JS
+  const  isConfirmed = confirm("Apakah Anda yakin ingin menghapus buku ini?");
 
-  if (bookIndex === -1) return;
-
-  // menghapus index sebanyak 1 (hanya index itu saja)
-  books.splice(bookIndex, 1);
-  document.dispatchEvent(new Event(RENDER_EVENT));
-  saveData();
+  if (isConfirmed) {
+    // mencari index yang tepat
+    const bookIndex = findBookIndex(bookId);
+    
+    if (bookIndex === -1) return;
+    
+    // menghapus index sebanyak 1 (hanya index itu saja)
+    books.splice(bookIndex, 1);
+    document.dispatchEvent(new Event(RENDER_EVENT));
+    saveData();
+  } else {
+    alert('Anda membatalkan hapus buku')
+  }
 }
 
 // Fungsi untuk mengubah status isComplete buku menjadi "false"
