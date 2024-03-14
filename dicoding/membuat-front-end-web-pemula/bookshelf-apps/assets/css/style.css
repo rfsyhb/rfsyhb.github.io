@@ -1,6 +1,6 @@
 :root {
   --text-color: #180202;
-  --bg-color: #EBEAE6;
+  --bg-color: #ebeae6;
   --bg-color-darker: #e0dfdb;
   --debug-color1: bisque;
   --debug-color2: rgb(253, 210, 131);
@@ -9,17 +9,26 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   background-color: var(--bg-color);
   margin: 0;
   display: flex;
   flex-flow: column nowrap;
+  /* width: 800px; */
 }
 
+input,
+button {
+  font-size: 16px;
+}
+
+main {
+  width: 800px;
+}
 .card {
   box-shadow: 0 0px 5px 0 rgba(0, 0, 0, 0.2);
   border-radius: 10px;
@@ -31,7 +40,84 @@ body {
   padding: 1.3rem;
 }
 
-.flex-column {
+/* ^header */
+header {
+  /* padding-block: 1.2rem 1.3rem; */
+  padding-inline: 1.3rem;
   display: flex;
-  flex-flow: column nowrap;
+  /* margin-inline: auto; */
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.5);
+}
+
+.head_bar img {
+  width: 240px;
+}
+
+/* ^ input section */
+.input_section {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+
+.input_section > h2 {
+  text-align: center;
+  color: var(--text-color);
+}
+
+.input_section > form > .input {
+  margin: 8px 0;
+}
+
+.input_section > form > button {
+  background-color: var(--text-color);
+  color: var(--bg-color);
+  border: 0;
+  border-radius: 5px;
+  display: block;
+  width: 100%;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.input_section > form > button > span {
+  font-weight: bold;
+}
+
+.input_section > form > .input > input {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.input_section > form > .input > label {
+  color: var(--text-color);
+  font-weight: bold;
+}
+
+.input_section > form > .input_inline {
+  margin: 12px 0;
+  display: flex;
+  align-items: center;
+}
+
+.input_section > form > .input_inline > label {
+  color: var(--text-color);
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+/* ^ book_shelf_container */
+.book_shelf_container_head {
+  margin: 0;
+  padding-bottom: 1rem;
+
+  /* flex */
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
 }

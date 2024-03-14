@@ -27,35 +27,31 @@
   <body>
     <!-- >header -->
     <header class="head_bar">
-      <div class="head_bar__logo">
-        <img src="assets/img/logo-name-rafi.png" alt="Rafi Syihab" />
-      </div>
-      <div class="head_bar__title">
-        <h1>Bookshelf Apps</h1>
-      </div>
+      <img src="assets/img/logo-name-rafi.png" alt="Rafi Syihab" />
+      <h1>Bookshelf Apps</h1>
     </header>
 
     <!-- >main -->
     <main>
       <!-- ^input -->
-      <section class="input_section">
+      <section class="input_section card">
         <h2>Masukkan Buku Baru</h2>
         <form id="inputBook">
           <div class="input">
             <label for="inputBookTitle">Judul</label>
-            <input id="inputBookTitle" type="text" required/>
+            <input id="inputBookTitle" type="text" required />
           </div>
           <div class="input">
             <label for="inputBookAuthor">Penulis</label>
-            <input id="inputBookAuthor" type="text" required/>
+            <input id="inputBookAuthor" type="text" required />
           </div>
           <div class="input">
             <label for="inputBookYear">Tahun</label>
-            <input id="inputBookYear" type="number" required/>
+            <input id="inputBookYear" type="number" required />
           </div>
           <div class="input_inline">
             <label for="inputBookIsComplete">Selesai dibaca</label>
-            <input id="inputBookIsComplete" type="checkbox"/>
+            <input id="inputBookIsComplete" type="checkbox" />
           </div>
           <button id="bookSubmit" type="submit">
             Masukkan Buku ke rak <span>Belum selesai dibaca</span>
@@ -64,15 +60,25 @@
       </section>
 
       <!-- ^bookshelf -->
-      <section class="book_shelf_container">
+      <section class="book_shelf_container card">
+        <!-- !container -->
+        <section class="book_shelf_container_head">
+          <h2 class="book_shelf_container__title">Rak Buku</h2>
+          <form id="searchBook">
+            <label for="searchBookTitle">Cari buku</label>
+            <input id="searchBookTitle" type="text" placeholder="nama" />
+            <button id="searchSubmit" type="submit">Cari</button>
+          </form>
+        </section>
+
         <!-- !not completed -->
-        <section class="book_shelf">
+        <section class="book_shelf card">
           <h2>Belum selesai dibaca (not completed)</h2>
           <div id="incompleteBookshelfList" class="book_list"></div>
         </section>
 
         <!-- !completed -->
-        <section class="book_shelf">
+        <section class="book_shelf card">
           <h2>Selesai dibaca (completed)</h2>
           <div id="completeBookshelfList" class="book_list"></div>
         </section>
