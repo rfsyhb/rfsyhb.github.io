@@ -10,4 +10,4 @@ Fitur:
 - Memindahkan buku antar rak
 - Menghapus buku di kedua rak
 - Memanfaatkan localStorage untuk penyimpanan data object buku
-- Meminta konfirmasi ketika menghapus buku
+- Meminta konfirmasi ketika menghapus buku (menggunakan method confirm)
