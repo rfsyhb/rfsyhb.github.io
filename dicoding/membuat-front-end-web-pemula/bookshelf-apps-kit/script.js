@@ -67,7 +67,7 @@ function addBook() {
 }
 
 // Fungsi untuk menampilkan buku ke UI
-function displayBooks() {
+function displayBooks(filteredBooks = books) {
   const incompleteBookshelfList = document.querySelector(
     "#incompleteBookshelfList"
   );
@@ -79,7 +79,7 @@ function displayBooks() {
   incompleteBookshelfList.innerHTML = "";
   completeBookshelfList.innerHTML = "";
 
-  for (const book of books) {
+  for (const book of filteredBooks) {
     const bookElement = makeBookElement(book);
     if (book.isComplete) {
       completeBookshelfList.appendChild(bookElement);
@@ -201,11 +201,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Fungsi untuk mencari buku berdasarkan judul
 function searchBooks() {
-  const searchValue = document
-    .getElementById("searchBookTitle")
-    .value.toLowerCase();
-  const filteredBooks = books.filter((book) =>
-    book.title.toLowerCase().includes(searchValue)
-  );
+  const searchValue = document.getElementById("searchBookTitle").value.toLowerCase();
+  const filteredBooks = books.filter((book) => book.title.toLowerCase().includes(searchValue));
   displayBooks(filteredBooks); // Menyesuaikan fungsi displayBooks untuk menerima parameter array buku
 }
