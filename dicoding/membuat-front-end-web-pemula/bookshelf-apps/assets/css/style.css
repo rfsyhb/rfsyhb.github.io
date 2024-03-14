@@ -27,8 +27,12 @@ button {
 }
 
 main {
-  width: 800px;
+  /* flex: 1; */
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
 }
+
 .card {
   box-shadow: 0 0px 5px 0 rgba(0, 0, 0, 0.2);
   border-radius: 10px;
@@ -43,6 +47,7 @@ main {
 /* ^header */
 header {
   /* padding-block: 1.2rem 1.3rem; */
+  padding-block: 0.2rem 0.3rem;
   padding-inline: 1.3rem;
   display: flex;
   /* margin-inline: auto; */
@@ -68,6 +73,7 @@ header {
 }
 
 .input_section > form > .input {
+  /* background-color: var(--debug-color1); */
   margin: 8px 0;
 }
 
