@@ -165,6 +165,7 @@ function makeBookElement(bookObject) {
     const undoButton = document.createElement("button");
     undoButton.innerHTML = '<i class="fas fa-undo"></i>';
     undoButton.classList.add("green");
+    undoButton.setAttribute('title', 'Urungkan');
     undoButton.addEventListener("click", function () {
       undoBookFromCompleted(id);
     });
@@ -172,6 +173,7 @@ function makeBookElement(bookObject) {
     const deleteButton = document.createElement("button");
     deleteButton.innerHTML = '<i class="fas fa-trash"></i>';
     deleteButton.classList.add("red");
+    deleteButton.setAttribute('title', 'Hapus');
     deleteButton.addEventListener("click", function () {
       removeBook(id);
     });
@@ -181,6 +183,7 @@ function makeBookElement(bookObject) {
     const completeButton = document.createElement("button");
     completeButton.innerHTML = '<i class="fas fa-check-square"></i>';
     completeButton.classList.add("green");
+    completeButton.setAttribute('title', 'Selesaikan');
     completeButton.addEventListener("click", function () {
       addBookToCompleted(id);
     });
@@ -188,6 +191,7 @@ function makeBookElement(bookObject) {
     const deleteButton = document.createElement("button");
     deleteButton.innerHTML = '<i class="fas fa-trash"></i>';
     deleteButton.classList.add("red");
+    deleteButton.setAttribute('title', 'Hapus');
     deleteButton.addEventListener("click", function () {
       removeBook(id);
     });
@@ -221,6 +225,8 @@ function removeBook(bookId) {
   const  isConfirmed = confirm(`Apakah Anda yakin ingin menghapus buku ${bookObject.title} (${bookObject.year}) ?`);
 
   if (isConfirmed) {
+    alert('Buku berhasil dihapus');
+
     // mencari index yang tepat
     const bookIndex = findBookIndex(bookId);
     
@@ -230,12 +236,6 @@ function removeBook(bookId) {
     books.splice(bookIndex, 1);
     document.dispatchEvent(new Event(RENDER_EVENT));
     saveData();
-    
-    // memastikan web sudah dimuat ulang
-    setTimeout(() => {
-      alert('Buku berhasil dihapus');
-    }, 200);
-    // alert('Buku berhasil dihapus');
   } 
 }
 
