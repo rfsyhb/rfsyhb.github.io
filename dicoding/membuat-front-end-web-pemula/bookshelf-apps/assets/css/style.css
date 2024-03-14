@@ -1,0 +1,12 @@
+:root {
+  --text-color: #180202;
+  --bg-color: #EBEAE6;
+  --bg-color-darker: #e0dfdb;
+  --debug-color1: bisque;
+  --debug-color2: rgb(253, 210, 131);
+}
+
+.flex {
+  display: flex;
+  
+}
